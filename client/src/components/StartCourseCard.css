@@ -1,0 +1,141 @@
+.network-security4 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.begin-learning-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 0 0;
+  font-size: 25px;
+  color: #000;
+  font-family: Outfit;
+}
+.lorem-ipsum-dolor4 {
+  width: 244.4px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-height: 72px;
+  word-break: break-word;
+}
+.lorem-ipsum-dolor-sit-amet-co-wrapper2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 0 0;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.person-fill1-wght400-grad0-ops-icon4 {
+  height: 18px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 18px;
+}
+.cyberskills11 {
+  position: relative;
+  display: inline-block;
+  min-width: 73px;
+}
+.person-fill1-wght400-grad0-ops-parent2,
+.similar-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.person-fill1-wght400-grad0-ops-parent2 {
+  gap: 6px;
+}
+.difficulty4,
+.easy4 {
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+}
+.easy4 {
+  font-weight: 600;
+  min-width: 32px;
+}
+.similar-names1,
+.similar-names2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.similar-names2 {
+  border-radius: 5px;
+  background-color: rgba(142, 255, 123, 0.55);
+  justify-content: center;
+  padding: 3px;
+  color: #47ed2b;
+}
+.similar-names1 {
+  justify-content: flex-start;
+}
+.start-course2 {
+  height: 25px;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Outfit;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+}
+.continuebutton4 {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 53px;
+  white-space: nowrap;
+}
+.card14,
+.similar-names3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.similar-names3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.card14 {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 12px 19px 22px;
+  gap: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: Roboto;
+}
+@media screen and (max-width: 450px) {
+  .network-security4 {
+    font-size: 20px;
+  }
+  .continuebutton4 {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}

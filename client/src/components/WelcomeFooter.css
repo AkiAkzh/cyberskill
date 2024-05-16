@@ -1,0 +1,193 @@
+.dashboard18,
+.logo16 {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+}
+.logo16 {
+  font-weight: 700;
+  min-width: 103px;
+}
+.dashboard18 {
+  cursor: pointer;
+  min-width: 100px;
+}
+.dashboard-wrapper4 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.courses-wrapper1:hover,
+.courses19,
+.dashboard-wrapper4:hover {
+  cursor: pointer;
+}
+.courses19 {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  min-width: 71px;
+}
+.courses-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.about-us16 {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  min-width: 78px;
+}
+.about-us-wrapper1,
+.fotterlinks5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fotterlinks5 {
+  width: 439px;
+  gap: 95px;
+  max-width: 100%;
+}
+.login13 {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 56px;
+}
+.footercontainer5,
+.loginbutton5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.loginbutton5 {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #3384ff;
+  justify-content: center;
+  padding: 8px 16px;
+  text-align: center;
+  color: inherit;
+}
+.loginbutton5:hover {
+  background-color: #2566c8;
+  cursor: pointer;
+}
+.footercontainer5 {
+  align-self: stretch;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 20px;
+}
+.vector-icon11 {
+  height: 15px;
+  width: 19px;
+  position: relative;
+  object-fit: cover;
+}
+.astanaitedukz10 {
+  position: relative;
+  white-space: nowrap;
+}
+.vector-parent6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.vector-icon12 {
+  height: 15px;
+  width: 19px;
+  position: relative;
+  object-fit: cover;
+}
+.astanaitedukz11 {
+  position: relative;
+  white-space: nowrap;
+}
+.emails5,
+.vector-parent7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.emails5 {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  font-size: 15px;
+  font-family: Roboto;
+}
+.footer5,
+.platform-prepares {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.footer5 {
+  flex: 1;
+  background-color: #141d2c;
+  border-top: 1px solid #e8ecf2;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px 186px 27px;
+  gap: 22px;
+}
+.platform-prepares {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 1px;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-family: Outfit;
+}
+@media screen and (max-width: 1100px) {
+  .footercontainer5 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .fotterlinks5 {
+    flex-wrap: wrap;
+  }
+  .footer5 {
+    padding-left: 93px;
+    padding-right: 93px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-us16,
+  .courses19,
+  .dashboard18,
+  .logo16 {
+    font-size: 16px;
+  }
+  .fotterlinks5 {
+    gap: 47px;
+  }
+  .login13 {
+    font-size: 16px;
+  }
+  .footer5 {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}

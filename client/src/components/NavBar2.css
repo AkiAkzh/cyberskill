@@ -1,0 +1,176 @@
+.cyberskills16 {
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+}
+.logo15 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard17 {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  min-width: 100px;
+}
+.dashboard17:hover {
+  font-weight: 600;
+  font-family: Outfit;
+  text-align: center;
+  cursor: pointer;
+}
+.login-button-instance {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+.login-button-instance:hover {
+  cursor: pointer;
+}
+.courses18 {
+  position: relative;
+  display: inline-block;
+  min-width: 71px;
+}
+.courses18:hover {
+  font-weight: 600;
+  font-family: Outfit;
+  cursor: pointer;
+}
+.about-us-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about-us-link:hover {
+  cursor: pointer;
+}
+.about-us15 {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  min-width: 78px;
+  white-space: nowrap;
+}
+.about-us15:hover {
+  font-weight: 600;
+  font-family: Outfit;
+}
+.about-us-link1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.login12 {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 56px;
+}
+.loginbutton4,
+.navlinks8,
+.navlinkscontainer8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.loginbutton4 {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #3384ff;
+  justify-content: center;
+  padding: 8px 16px;
+  color: inherit;
+}
+.loginbutton4:hover {
+  mix-blend-mode: normal;
+  background-color: #2f73d9;
+}
+.navlinks8,
+.navlinkscontainer8 {
+  max-width: 100%;
+}
+.navlinks8 {
+  flex: 1;
+  justify-content: space-between;
+  gap: 20px;
+}
+.navlinkscontainer8 {
+  width: 681px;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 20px;
+}
+.navbar-content8,
+.navbar8 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar-content8 {
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1280px;
+  gap: 20px;
+}
+.navbar8 {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 80px 14px;
+  box-sizing: border-box;
+  z-index: 99;
+  max-width: 100%;
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  font-family: Outfit;
+}
+@media screen and (max-width: 1275px) {
+  .navbar-content8 {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navlinks8 {
+    display: none;
+  }
+  .navlinkscontainer8 {
+    width: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .navlinks8 {
+    display: none;
+  }
+  .navlinkscontainer8 {
+    width: 0;
+    gap: 35px;
+  }
+  .navbar8 {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navlinkscontainer8 {
+    gap: 17px;
+  }
+}

@@ -1,0 +1,145 @@
+.network-security3 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.network-security-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px 0 0;
+  font-size: 25px;
+  color: #000;
+  font-family: Outfit;
+}
+.lorem-ipsum-dolor3 {
+  width: 244.4px;
+  position: relative;
+  line-height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+  max-height: 72px;
+  word-break: break-word;
+}
+.lorem-ipsum-dolor-sit-amet-co-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px 0 0;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.person-fill1-wght400-grad0-ops-icon3 {
+  height: 18px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 18px;
+}
+.cyberskills8 {
+  position: relative;
+  display: inline-block;
+  min-width: 73px;
+}
+.cyberskills-wrapper1,
+.person-fill1-wght400-grad0-ops-parent1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.person-fill1-wght400-grad0-ops-parent1 {
+  gap: 6px;
+}
+.difficulty3,
+.hard1 {
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+}
+.hard1 {
+  font-weight: 600;
+  min-width: 33px;
+}
+.difficulty-parent1,
+.hard-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hard-container {
+  border-radius: 5px;
+  background-color: rgba(255, 62, 62, 0.18);
+  justify-content: center;
+  padding: 3px 5.5px;
+  color: #ff3e3e;
+}
+.difficulty-parent1 {
+  justify-content: flex-start;
+}
+.start-course1 {
+  flex: 1;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Outfit;
+  color: #000;
+  text-align: center;
+}
+.continuebutton3 {
+  cursor: pointer;
+  border: 1px solid #000;
+  padding: 7px;
+  background-color: #fff;
+  align-self: stretch;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.continuebutton3:hover {
+  background-color: #e6e6e6;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+.card13,
+.frame-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+}
+.card13 {
+  width: 299px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: #fff;
+  padding: 12px 19px 22px;
+  box-sizing: border-box;
+  gap: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: Roboto;
+}
+@media screen and (max-width: 450px) {
+  .network-security3 {
+    font-size: 20px;
+  }
+}

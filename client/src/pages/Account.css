@@ -1,0 +1,18 @@
+.account {
+  background-color: #141d2c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  gap: 42px;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+h1 {
+    font-family: Outfit;
+    color: #fff;
+}

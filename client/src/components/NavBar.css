@@ -1,0 +1,152 @@
+.cyberskills9 {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+}
+.logo10 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.courses12,
+.dashboard12 {
+  text-decoration: none;
+  color: inherit;
+}
+.dashboard12 {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+}
+.courses12 {
+  min-width: 71px;
+}
+.about-us11,
+.courses12,
+.signup1 {
+  position: relative;
+  display: inline-block;
+}
+.about-us11 {
+  text-decoration: none;
+  color: inherit;
+  min-width: 78px;
+  white-space: nowrap;
+}
+.signup1 {
+  letter-spacing: 0.05em;
+  line-height: 25.6px;
+  font-weight: 600;
+  min-width: 73px;
+}
+.signupbuttom1 {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #3384ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  white-space: nowrap;
+  color: inherit;
+}
+.navlinks5,
+.navlinkscontainer5 {
+  flex-direction: row;
+  max-width: 100%;
+}
+.navlinks5 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.navlinkscontainer5 {
+  width: 691px;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.navbar-content5,
+.navbar5,
+.navlinkscontainer5 {
+  display: flex;
+  align-items: center;
+}
+.navbar-content5 {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1280px;
+  gap: 20px;
+}
+.navbar5 {
+  align-self: stretch;
+  background-color: #141d2c;
+  border-bottom: 1px solid #e8ecf2;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 80px 18px;
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  max-width: 100%;
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  font-family: Outfit;
+}
+
+.navlink {
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  font-weight: 600;
+  font-family: Outfit;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1275px) {
+  .navbar-content5 {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navlinks5 {
+    display: none;
+  }
+  .navlinkscontainer5 {
+    width: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .navlinks5 {
+    display: none;
+  }
+  .navlinkscontainer5 {
+    width: 0;
+    gap: 35px;
+  }
+  .navbar5 {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navlinkscontainer5 {
+    gap: 17px;
+  }
+}

@@ -1,0 +1,179 @@
+.dashboard15 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: inherit;
+}
+.dashboard-wrapper3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.welcome-back1 {
+  margin: 0;
+  width: 360px;
+  position: relative;
+  font-size: 50px;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.complete-the-courses1 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: Roboto;
+}
+.view-other-courses1 {
+  margin: 0;
+  height: 32px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+}
+.arrow-forward-fill0-wght400-gr-icon1 {
+  height: 36px;
+  width: 36px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.getstartedbutton3,
+.welcome-back-parent {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.getstartedbutton3 {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: #000;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 33px;
+  gap: 32px;
+  white-space: nowrap;
+  text-align: center;
+  color: inherit;
+}
+.welcome-back-parent {
+  width: 671px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 0;
+  gap: 16.5px;
+  min-width: 671px;
+}
+.icon5 {
+  height: 267px;
+  width: 264px;
+  position: relative;
+  object-fit: cover;
+}
+.frame-parent6 {
+  width: 1081px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 20px;
+}
+.frame-parent5,
+.frame-wrapper8 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-wrapper8 {
+  align-self: stretch;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  background: linear-gradient(100.82deg, #659aeb, #f5cb91 80.02%);
+  overflow: hidden;
+  padding: 6px 77px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+.frame-parent5 {
+  gap: 27px;
+  text-align: left;
+  font-size: 70px;
+  color: #fff;
+  font-family: Outfit;
+}
+@media screen and (max-width: 1275px) {
+  .icon5,
+  .welcome-back-parent {
+    flex: 1;
+  }
+  .frame-parent6 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .frame-wrapper8 {
+    padding-left: 38px;
+    padding-right: 38px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .welcome-back-parent {
+    flex: 1;
+    min-width: 100%;
+  }
+  .icon5 {
+    flex: 1;
+  }
+  .frame-parent6 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .dashboard15 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .welcome-back1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .dashboard15 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .welcome-back1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .complete-the-courses1 {
+    font-size: 20px;
+  }
+  .getstartedbutton3 {
+    gap: 16px;
+  }
+}

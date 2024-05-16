@@ -1,0 +1,165 @@
+.learn-the-theory1 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: inherit;
+}
+.master-the-fundamentals1 {
+  width: 540px;
+  position: relative;
+  font-family: Roboto;
+  display: inline-block;
+  max-width: 100%;
+}
+.begin-learning2 {
+  height: 32px;
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.beginlearningbutton8 {
+  cursor: pointer;
+  text-decoration: none;
+  width: 291px;
+  height: 71px;
+  border-radius: 15px;
+  border: 3px solid #4f8ce8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 18px 30px 18px 32px;
+  text-align: center;
+  color: inherit;
+}
+.beginlearningbutton8:hover {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+}
+.learn-the-theory-and-practice-group,
+.learnthetheory-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.learn-the-theory-and-practice-group {
+  align-self: stretch;
+  gap: 18.3px;
+}
+.learnthetheory-child {
+  flex: 1;
+  padding: 0 0 81px;
+  box-sizing: border-box;
+  min-width: 398px;
+  min-height: 418px;
+}
+.dashboard-link {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  filter: blur(304px);
+  border-radius: 50%;
+  background-color: rgba(107, 158, 236, 0.4);
+  max-width: 100%;
+}
+.elipse1 {
+  height: 487px;
+  width: 487px;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.about-us-link2 {
+  height: 481px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.shield1 {
+  width: 453px;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 34px;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.learnthetheory1,
+.shield1,
+.shieldicon1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.shieldicon1 {
+  height: 501px;
+  width: 487px;
+  align-items: flex-start;
+  position: relative;
+  min-width: 487px;
+}
+.learnthetheory1 {
+  align-self: stretch;
+  align-items: flex-end;
+  padding: 2.8px 0 2.7px;
+  box-sizing: border-box;
+  row-gap: 20px;
+  text-align: left;
+  font-size: 25px;
+  color: #fff;
+  font-family: Outfit;
+}
+@media screen and (max-width: 1100px) {
+  .shieldicon1 {
+    flex: 1;
+  }
+  .learnthetheory1 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .learn-the-theory1 {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  .learnthetheory-child,
+  .shieldicon1 {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .learn-the-theory1 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .begin-learning2,
+  .master-the-fundamentals1 {
+    font-size: 20px;
+  }
+  .learnthetheory-child {
+    padding-bottom: 53px;
+    box-sizing: border-box;
+  }
+}
