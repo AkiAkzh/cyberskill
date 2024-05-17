@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-import LoginNavBar from "../components/LoginNavBar";
+import LoginNavBar from "../components/NavBar";
 import "./LoginPage.css";
 
 const LoginPage: FunctionComponent = () => {

@@ -3,40 +3,29 @@ import { Link } from "react-router-dom";
 import LanguageSelection from "./LanguageSelection";
 import "./NavBar.css";
 
-const LoginNavBar: FunctionComponent = () => {
+const NavBar: FunctionComponent = () => {
   return (
-    <header className="navbar3">
-          <div className="navbar-content3">
-            <a className="logo6">
-              <Link to="/welcomepage"className="cyberskills6">CyberSkills</Link>
-            </a>
-            <div className="navlinkscontainer3">
-              <div className="navlinks3">
-              <LanguageSelection />
-                <Link to="/dashboard" className="dashboard-container">
-                  <div className="navlink">Dashboard</div>
-                </Link>
-                <div className="courses-wrapper">
-                  <Link className="navlink" to="/courses">
-                    Courses
-                  </Link>
-                </div>
-                <div className="about-us-wrapper">
-                  <Link to="/about-us" className="navlink">About us</Link>
-                </div>
-                <Link to="/account" className="avatarprofile1">
-                  <img
-                    className="avatar-icon1"
-                    loading="lazy"
-                    alt=""
-                    src="/avatar@2x.png"
-                  />
-                </Link>
-              </div>
-            </div>
+    <header className="Navbar-container">
+      <div className="Navbar-content">
+        <div className="Cyberskills-logo">
+          <Link className="Cyberskills-label" to="/">
+            CyberSkills
+          </Link>
+        </div>
+        <div className="Navbar-link-container">
+          <div className="navlinks-group-container">
+          <LanguageSelection />
+            <Link to="/dashboard"className="links-nav">Dashboard</Link>
+            <Link to="/courses"className="links-nav">Courses</Link>
+            <Link to="/about-us"className="links-nav">About us</Link>
+            <Link className="SignUpButtom" to="/sign-up-page">
+              <div className="SignUp-label">Sign up</div>
+            </Link>
           </div>
-        </header>
+        </div>
+      </div>
+    </header>
   );
 };
 
-export default LoginNavBar;
+export default NavBar;

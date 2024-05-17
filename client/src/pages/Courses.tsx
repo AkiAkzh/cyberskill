@@ -1,120 +1,46 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import CoursesHeader from "../components/CoursesHeader";
 import SearchCoursesBlock from "../components/SearchCoursesBlock";
+import CoursesList from "../components/CoursesList"
 import "./Courses.css";
 
 const Courses1: FunctionComponent = () => {
   return (
     <div className="courses">
       <NavBar />
-      <CoursesHeader />
-      <SearchCoursesBlock />
-      <section className="homes-wrapper">
-        <div className="homes">
-          <div className="card1">
-            <div className="network-security-wrapper">
-              <h2 className="network-security">Network Security</h2>
-            </div>
-            <div className="lorem-ipsum-dolor-sit-amet-co-wrapper">
-              <div className="lorem-ipsum-dolor">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Varius.wadfwafwfsafsafasfsa
-              </div>
-            </div>
-            <div className="person-fill1-wght400-grad0-ops-parent">
-              <img
-                className="person-fill1-wght400-grad0-ops-icon"
-                loading="lazy"
-                alt=""
-                src="/person-fill1-wght400-grad0-opsz24-11.svg"
-              />
-              <div className="cyberskills-wrapper">
-                <div className="cyberskills1">Cyberskills</div>
-              </div>
-            </div>
-            <div className="difficulty-parent">
-              <div className="difficulty">Difficulty:</div>
-              <div className="easy-wrapper">
-                <div className="easy">Easy</div>
-              </div>
-            </div>
-            <div className="continuebutton-wrapper">
-              <button className="continuebutton">
-                <div className="start-course">Start course</div>
-              </button>
+      <section className="home-header">
+      <div className="home-header-inner">
+        <div className="rectangle-parent">
+          <div className="rectangle-div" />
+          <div className="frame-wrapper2">
+            <div className="courses-parent">
+              <h1 className="courses11">Courses</h1>
+              <h2 className="search-for-any">
+                Search for any information security course by filtering them by
+                difficulty
+              </h2>
             </div>
           </div>
-          <div className="card11">
-            <div className="network-security-container">
-              <h2 className="network-security1">Network Security</h2>
+          <div className="frame-parent2">
+            <img
+              className="frame-icon"
+              loading="lazy"
+              alt=""
+              src="/frame1@2x.png"
+            />
+            <div className="person-fill-weight-gradient-ci-parent">
+              <div className="person-fill-weight-gradient-ci" />
+              <img className="frame-icon1" alt="" src="/frame-11@2x.png" />
             </div>
-            <div className="lorem-ipsum-dolor-sit-amet-co-container">
-              <div className="lorem-ipsum-dolor1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Varius.wadfwafwfsafsafasfsa
-              </div>
-            </div>
-            <div className="person-fill1-wght400-grad0-ops-group">
-              <img
-                className="person-fill1-wght400-grad0-ops-icon1"
-                alt=""
-                src="/person-fill1-wght400-grad0-opsz24-11.svg"
-              />
-              <div className="cyberskills-container">
-                <div className="cyberskills2">Cyberskills</div>
-              </div>
-            </div>
-            <div className="difficulty-group">
-              <div className="difficulty1">Difficulty:</div>
-              <div className="medium-wrapper">
-                <div className="medium">Medium</div>
-              </div>
-            </div>
-            <button className="continuebutton-container">
-              <button className="continuebutton1" disabled={true}>
-                <div className="added">Added</div>
-              </button>
-            </button>
-          </div>
-          <div className="card12">
-            <div className="network-security-frame">
-              <h2 className="network-security2">Network Security</h2>
-            </div>
-            <div className="lorem-ipsum-dolor-sit-amet-co-frame">
-              <div className="lorem-ipsum-dolor2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Varius.wadfwafwfsafsafasfsa
-              </div>
-            </div>
-            <div className="person-fill1-wght400-grad0-ops-container">
-              <img
-                className="person-fill1-wght400-grad0-ops-icon2"
-                alt=""
-                src="/person-fill1-wght400-grad0-opsz24-11.svg"
-              />
-              <div className="cyberskills-frame">
-                <div className="cyberskills3">Cyberskills</div>
-              </div>
-            </div>
-            <div className="difficulty-container">
-              <div className="difficulty2">Difficulty:</div>
-              <button className="frame-wrapper">
-                <div className="easy-container">
-                  <div className="easy1">Easy</div>
-                </div>
-              </button>
-            </div>
-            <button className="continuebutton-frame">
-              <button className="continuebutton2" disabled={true}>
-                <div className="added1">Added</div>
-              </button>
-            </button>
+            <img className="frame-icon2" alt="" src="/frame-21@2x.png" />
           </div>
         </div>
-      </section>
-      <div className="footer-container">
+      </div>
+    </section>
+
+      <CoursesList />
+            <div className="footer-container">
         <button className="show-more-button">
           <div className="show-more-text">Show more</div>
         </button>

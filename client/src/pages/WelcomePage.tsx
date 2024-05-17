@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import LanguageSelection from "../components/LanguageSelection";
+import NavBar from "../components/NavBar";
 import "./WelcomePage.css";
 
 const WelcomePage1: FunctionComponent = () => {
@@ -29,36 +30,8 @@ const WelcomePage1: FunctionComponent = () => {
             </Link>
           </div>
         </div>
-        <header className="navbar4">
-          <div className="navbar-content4">
-            <div className="logo8">
-              <a className="cyberskills7" target="_blank">
-                CyberSkills
-              </a>
-            </div>
-            <div className="navlinkscontainer4">
-              <div className="navlinks4">
-              <LanguageSelection />
-                <div className="dashboard-wrapper1">
-                  <Link className="dashboard10" to="/login-page">
-                    Dashboard
-                  </Link>
-                </div>
-                <div className="courses-container">
-                  <Link className="courses9" to="/courses">
-                    Courses
-                  </Link>
-                </div>
-                <div className="about-us-container">
-                  <Link to="about-us"className="about-us8">About us</Link>
-                </div>
-                <Link className="loginbutton1" to="/login-page">
-                  <div className="login7">Login</div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+        
+        <NavBar/>
       </section>
       <section className="welcomepage-inner">
         <div className="frame-parent1">
