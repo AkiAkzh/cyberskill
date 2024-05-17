@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React,{ FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import LoginNavBar from "../components/NavBar";
 import "./LoginPage.css";

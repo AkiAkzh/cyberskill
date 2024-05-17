@@ -1,11 +1,11 @@
-import { FunctionComponent } from "react";
+import React,{ FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import SearchCoursesBlock from "../components/SearchCoursesBlock";
+import Footer from "../components/Footer";
 import CoursesList from "../components/CoursesList"
 import "./Courses.css";
 
-const Courses1: FunctionComponent = () => {
+const Courses: FunctionComponent = () => {
   return (
     <div className="courses">
       <NavBar />
@@ -37,43 +37,11 @@ const Courses1: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </section>
-
-      <CoursesList />
-            <div className="footer-container">
-        <button className="show-more-button">
-          <div className="show-more-text">Show more</div>
-        </button>
-      </div>
-      <section className="footer">
-        <div className="footercontainer">
-          <Link className="logo1" to="/dashboard">
-            CyberSkills
-          </Link>
-          <div className="fotterlinks">
-            <Link className="dashboard1" to="/dashboard">
-              Dashboard
-            </Link>
-            <a className="courses2">Courses</a>
-            <a className="about-us1">About us</a>
-          </div>
-          <a className="accountbutton">
-            <div className="account">Account</div>
-          </a>
-        </div>
-        <div className="emails">
-          <div className="vector-parent">
-            <img className="vector-icon" alt="" src="/vector-11.svg" />
-            <div className="astanaitedukz">212456@astanait.edu.kz</div>
-          </div>
-          <div className="vector-group">
-            <img className="vector-icon1" alt="" src="/vector-11.svg" />
-            <div className="astanaitedukz1">212456@astanait.edu.kz</div>
-          </div>
-        </div>
       </section>
+      <CoursesList />
+      <Footer/>
     </div>
   );
 };
 
-export default Courses1;
+export default Courses;

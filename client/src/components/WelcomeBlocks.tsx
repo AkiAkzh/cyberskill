@@ -1,4 +1,4 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import React,{ FunctionComponent, useMemo, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import "./WelcomeBlocks.css";
 

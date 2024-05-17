@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React,{ FunctionComponent } from "react";
 import "./SignUpForm.css";
 import { Link } from "react-router-dom";
 

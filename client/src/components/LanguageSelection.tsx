@@ -1,4 +1,4 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import React, { FunctionComponent, useMemo, type CSSProperties } from "react";
 import "./LanguageSelection.css";
 
 export type LanguageSelectionType = {

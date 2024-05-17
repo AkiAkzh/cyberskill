@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import NavBar from "../components/NavBar";
 import SignUpForm from "../components/SignUpForm";
 import "./SignUpPage.css";
