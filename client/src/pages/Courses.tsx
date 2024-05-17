@@ -1,9 +1,8 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import CoursesHeader from "../components/Home Header";
+import CoursesHeader from "../components/CoursesHeader";
 import SearchCoursesBlock from "../components/SearchCoursesBlock";
-import Card from "../components/Card";
 import "./Courses.css";
 
 const Courses1: FunctionComponent = () => {
@@ -79,21 +78,6 @@ const Courses1: FunctionComponent = () => {
               </button>
             </button>
           </div>
-          <Card hard="Hard" />
-          <Card
-            hard="Easy"
-            propBackgroundColor="rgba(142, 255, 123, 0.55)"
-            propPadding="3px"
-            propColor="#47ed2b"
-            propPadding1="7px 8px"
-          />
-          <Card
-            hard="Hard"
-            propBackgroundColor="rgba(255, 62, 62, 0.18)"
-            propPadding="3px 5.5px"
-            propColor="#ff3e3e"
-            propPadding1="7px 12px"
-          />
           <div className="card12">
             <div className="network-security-frame">
               <h2 className="network-security2">Network Security</h2>

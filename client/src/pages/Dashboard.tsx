@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-import MyCoursesBlock from "../components/Footer Container";
+import MyCoursesBlock from "../components/MyCoursesBlock";
 import NavBar from "../components/NavBar";
 import "./Dashboard.css";
 import SearchCoursesBlock from "../components/SearchCoursesBlock";
@@ -38,9 +38,6 @@ const Dashboard: FunctionComponent = () => {
         </section>
         <MyCoursesBlock />
       </main>
-      <button className="show-more-button3">
-        <div className="show-more-text3">Show more</div>
-      </button>
       <footer className="footer2">
         <div className="footercontainer2">
           <a className="logo7">CyberSkills</a>
