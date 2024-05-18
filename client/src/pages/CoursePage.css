@@ -237,7 +237,7 @@ ul {
   font-size: 20px;
   line-height: 160%;
   font-weight: 500;
-  font-family: Outfit;
+  font-family: Roboto;
   display: inline-block;
   min-width: 90px;
 }
@@ -381,7 +381,7 @@ ul {
   text-align: left;
   font-size: 20px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .coursesectionscontainer {
   width: 1320px;

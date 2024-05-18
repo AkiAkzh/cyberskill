@@ -16,13 +16,13 @@
   box-sizing: border-box;
   max-width: 100%;
   font-size: 45px;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .difficulty {
   position: relative;
   display: inline-block;
   flex: 1;
-  font-family: Outfit;
+  font-family: Roboto;
   min-width: 85px;
 }
 .difficultytype-easy {
@@ -103,7 +103,7 @@
 }
 .categorycontainer {
   gap: 7px;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .coursetagscontainer {
   width: 615px;
@@ -145,7 +145,7 @@ ul {
   line-height: 25.6px;
   text-transform: capitalize;
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #fff;
   text-align: center;
 }
@@ -186,7 +186,7 @@ ul {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #fff;
   text-align: center;
 }

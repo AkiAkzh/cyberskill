@@ -21,7 +21,7 @@
 .welcome-page-header{
   max-width: 100%;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
   
   align-self: stretch;
   height: 717px;
@@ -89,7 +89,7 @@
   height: 140px;
   font-size: 60px;
   line-height: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   font-family: inherit;
   flex-shrink: 0;
@@ -151,7 +151,7 @@
   text-align: left;
   font-size: 25px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 
 }
 .welcome-page-landing-container{
@@ -217,7 +217,7 @@
   position: relative;
   font-size: 50px;
   line-height: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   font-family: inherit;
 
@@ -233,19 +233,18 @@
 }
 
 .info-block-button{
-  
   cursor: pointer;
   text-decoration: none;
-  width: 291px;
+  width: 360px;
   height: 71px;
   border-radius: 15px;
   border: 3px solid #4f8ce8;
   box-sizing: border-box;
-  display: flex;
+  display: block;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 18px 30px 18px 32px;
+  padding: 18px 30px 18px 30px;
   text-align: center;
   color: inherit;
 }
@@ -396,7 +395,7 @@
   padding: 8px 0;
   box-sizing: border-box;
   gap: 10px;
-  font-family: Outfit;
+  font-family: Roboto;
   font-weight: 600;
   font-size: 20px;
   color: #fff;
@@ -411,7 +410,7 @@
 }
 .dashboard10:hover {
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   text-align: center;
 }
 .dashboard-wrapper1 {
@@ -434,7 +433,7 @@
 }
 .courses9:hover {
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .courses-container {
   display: flex;
@@ -455,7 +454,7 @@
 }
 .about-us8:hover {
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   cursor: pointer;
 }
 .about-us-container {
@@ -519,7 +518,7 @@
 .navbar4 {
   max-width: 100%;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .navbar4 {
   position: sticky;
@@ -656,7 +655,7 @@
   position: relative;
   font-size: 50px;
   line-height: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   font-family: inherit;
   display: inline-block;
@@ -751,11 +750,11 @@
 }
 .beginlearningbutton5 {
   text-decoration: none;
-  width: 198px;
+  width: 250px;
   border-radius: 15px;
   border: 3px solid #4f8ce8;
   box-sizing: border-box;
-  display: flex;
+  display: block;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
@@ -789,7 +788,7 @@
   position: relative;
   font-size: 50px;
   line-height: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   font-family: inherit;
 }
@@ -812,15 +811,15 @@
 .beginlearningbutton6 {
   cursor: pointer;
   text-decoration: none;
-  width: 288px;
+  width: 350px;
   border-radius: 15px;
   border: 3px solid #4f8ce8;
   box-sizing: border-box;
-  display: flex;
+  display: block;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 14px 27px 14px 32px;
+  padding: 14px 27px 14px 27px;
   text-align: center;
   color: inherit;
 }
@@ -914,7 +913,7 @@
   position: relative;
   font-size: inherit;
   line-height: 100%;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 700;
   font-family: inherit;
 }
@@ -1166,5 +1165,5 @@
   text-align: left;
   font-size: 20px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }

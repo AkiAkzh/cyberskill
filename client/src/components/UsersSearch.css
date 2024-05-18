@@ -15,7 +15,7 @@
   padding: 10px;
   box-sizing: border-box;
   gap: 10px;
-  font-family: Outfit;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 25px;
   color: #fff;
@@ -33,7 +33,7 @@
   padding: 10px;
   box-sizing: border-box;
   gap: 10px;
-  font-family: Outfit;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 25px;
   color: #fff;
@@ -268,7 +268,7 @@
   text-align: left;
   font-size: 20px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .show-more-text {
   position: relative;

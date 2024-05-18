@@ -3,7 +3,7 @@
   position: relative;
   font-size: 26px;
   letter-spacing: 0.02em;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #171e1d;
   text-align: left;
 }
@@ -147,7 +147,7 @@
   letter-spacing: 0.05em;
   line-height: 25.6px;
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #fff;
   text-align: center;
   display: inline-block;

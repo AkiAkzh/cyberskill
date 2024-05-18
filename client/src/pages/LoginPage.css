@@ -100,7 +100,7 @@
   font-size: 20px;
   letter-spacing: 0.05em;
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -215,7 +215,7 @@
   text-align: left;
   font-size: 26px;
   color: #171e1d;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 .login-page {
   width: 100%;

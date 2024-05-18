@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useMemo, type CSSProperties } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import "./LanguageSelection.css";
 
 export type LanguageSelectionType = {
@@ -15,6 +16,8 @@ const LanguageSelection: FunctionComponent<LanguageSelectionType> = ({
   languageSelectionBackgroundColor,
   languageSelectionPadding,
 }) => {
+  const { language, setLanguage } = useLanguage();
+
   const languageSelectionStyle: CSSProperties = useMemo(() => {
     return {
       height: languageSelectionHeight,
@@ -30,7 +33,12 @@ const LanguageSelection: FunctionComponent<LanguageSelectionType> = ({
   ]);
 
   return (
-    <select className="languageselection5" style={languageSelectionStyle}>
+    <select
+      className="languageselection5"
+      style={languageSelectionStyle}
+      value={language}
+      onChange={(e) => setLanguage(e.target.value as 'EN' | 'KZ' | 'RU')}
+    >
       <option value="EN">EN</option>
       <option value="KZ">KZ</option>
       <option value="RU">RU</option>

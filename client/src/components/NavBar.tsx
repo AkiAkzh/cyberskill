@@ -1,7 +1,9 @@
 import React , { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import LanguageSelection from "./LanguageSelection";
+import { useLanguage } from '../context/LanguageContext';
 import "./NavBar.css";
+
 
 const NavBar: FunctionComponent = () => {
   return (

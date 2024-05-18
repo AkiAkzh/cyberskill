@@ -32,7 +32,7 @@
   font-size: 20px;
   letter-spacing: 0.05em;
   font-weight: 600;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #fff;
   text-align: center;
   display: inline-block;
@@ -115,7 +115,7 @@
   text-align: left;
   font-size: 20px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 @media screen and (max-width: 1100px) {
   .footercontainer4 {

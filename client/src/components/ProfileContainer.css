@@ -69,7 +69,7 @@
 .email-label-text {
   position: relative;
   font-size: 20px;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #9eb1d1;
   text-align: left;
   display: inline-block;
@@ -145,7 +145,7 @@
 .password-label-text {
   position: relative;
   font-size: 20px;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #9eb1d1;
   text-align: left;
   display: inline-block;
@@ -189,7 +189,7 @@
 .confirm-password-label {
   position: relative;
   font-size: 20px;
-  font-family: Outfit;
+  font-family: Roboto;
   color: #9eb1d1;
   text-align: left;
 }
@@ -355,7 +355,7 @@
   text-align: left;
   font-size: 20px;
   color: #fff;
-  font-family: Outfit;
+  font-family: Roboto;
 }
 @media screen and (max-width: 750px) {
   .my-profile-heading {
