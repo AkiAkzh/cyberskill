@@ -1,6 +1,7 @@
 import React,{ FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import LanguageSelection from "../components/LanguageSelection";
+import FooterContainer from "../components/FooterContainer";
 import NavBar from "../components/NavBar";
 import "./WelcomePage.css";
 
@@ -17,48 +18,48 @@ const WelcomePage: FunctionComponent = () => {
               src="/image-61@2x.png"
             />
           </div>
-          <div className="herocontent">
-            <h1 className="welcomeheader">
+          <div className="welcome-page-text-container">
+            <h1 className="welcome-page-text-header">
               Discover your path to <br></br>cybersecurity proficiency here
             </h1>
-            <div className="welcomesubtext">
+            <div className="welcome-page-text">
               Dive into real-world scenarios with tasks designed to sharpen your
               cybersecurity skills through practical experience.
             </div>
-            <Link className="startbutton" to="/courses">
-              <div className="start-now">Start now</div>
+            <Link className="welcome-page-start-button" to="/courses">
+              <div className="welcome-page-start-now-text">Start now</div>
             </Link>
           </div>
         </div>
         
         <NavBar/>
       </section>
-      <section className="welcomepage-inner">
-        <div className="frame-parent1">
-          <div className="learnthetheory-wrapper">
-            <div className="learnthetheory">
-              <div className="learnthetheory-inner">
-                <div className="learn-the-theory-and-practice-parent">
-                  <h1 className="learn-the-theory">
+      <section className="welcome-page-landing">
+        <div className="welcome-page-landing-container">
+          <div className="welcome-page-landing-info-block">
+            <div className="info-block">
+              <div className="info-block-inner">
+                <div className="info-block-text-container">
+                  <h1 className="info-block-header-text">
                     Learn the theory and practice
                   </h1>
-                  <div className="master-the-fundamentals">
+                  <div className="info-block-main-text">
                     Master the fundamentals and apply them in real-world
                     scenarios with our comprehensive approach to cybersecurity
                     education.
                   </div>
-                  <Link className="beginlearningbutton4" to="/login-page">
+                  <Link className="info-block-button" to="/login-page">
                     <div className="begin-learning">begin learning</div>
                   </Link>
                 </div>
               </div>
-              <div className="shieldicon">
+              <div className="info-block-frame-container">
                 <div className="elipse">
                   <div className="elipse-child" />
                 </div>
-                <div className="shield">
+                <div className="info-block-frame-field">
                   <img
-                    className="icon2"
+                    className="info-block-frame-icon"
                     loading="lazy"
                     alt=""
                     src="/5-21@2x.png"
@@ -144,42 +145,7 @@ const WelcomePage: FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section className="footer-wrapper">
-        <div className="footer3">
-          <div className="footercontainer3">
-            <a className="logo9">CyberSkills</a>
-            <div className="fotterlinks3">
-              <Link className="frame-a" to="/login-page">
-                <div className="dashboard11">Dashboard</div>
-              </Link>
-              <Link className="courses-frame" to="/login-page">
-                <div className="courses10">Courses</div>
-              </Link>
-              <a className="about-us-frame">
-                <a className="about-us10">About us</a>
-              </a>
-            </div>
-            <Link className="loginbutton2" to="/login-page">
-              <div className="login8">Login</div>
-            </Link>
-          </div>
-          <div className="emails3">
-            <div className="vector-parent2">
-              <img
-                className="vector-icon5"
-                loading="lazy"
-                alt=""
-                src="/vector3@2x.png"
-              />
-              <div className="astanaitedukz6">212456@astanait.edu.kz</div>
-            </div>
-            <div className="vector-parent3">
-              <img className="vector-icon6" alt="" src="/vector3@2x.png" />
-              <div className="astanaitedukz7">212456@astanait.edu.kz</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FooterContainer/>
     </div>
   );
 };
