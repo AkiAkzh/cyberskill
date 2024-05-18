@@ -1,7 +1,7 @@
 export const data = [{
   "id": 1,
   "Title": "Stim",
-  "Description": "04 Glacier Hill Junction",
+  "Description": "04 Glacier Hill Junction04 Glacier Hill Junction ",
   "Author": "hmaskrey0@alexa.com",
   "Difficulty": "Hard"
 }, {

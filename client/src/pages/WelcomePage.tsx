@@ -4,12 +4,12 @@ import LanguageSelection from "../components/LanguageSelection";
 import NavBar from "../components/NavBar";
 import "./WelcomePage.css";
 
-const WelcomePage1: FunctionComponent = () => {
+const WelcomePage: FunctionComponent = () => {
   return (
-    <div className="welcomepage1">
-      <section className="herocontainer-parent">
-        <div className="herocontainer">
-          <div className="wrapper-image-6">
+    <div className="welcome-page-main">
+      <section className="welcome-page-header">
+        <div className="welcome-page-header-container">
+          <div className="welcome-page-header-photo">
             <img
               className="image-6-icon"
               loading="lazy"
@@ -184,4 +184,4 @@ const WelcomePage1: FunctionComponent = () => {
   );
 };
 
-export default WelcomePage1;
+export default WelcomePage;

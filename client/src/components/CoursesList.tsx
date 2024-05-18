@@ -115,10 +115,10 @@ const CoursesList: FunctionComponent = () => {
         </div>
         ))}
       </div>
-      <div className="footer-container">
+      <div className="showmore-container">
       {visibleCourses < data.length && ( // показываем кнопку "Show more" только если есть еще курсы для показа
-          <button className="show-more-button" onClick={showMoreCourses}>
-            <div className="show-more-text">Show more</div>
+          <button className="show-more-button-course" onClick={showMoreCourses}>
+            <div className="show-more-text-course">Show more</div>
           </button>
         )}
         </div>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 import {
   Routes,
   Route,
@@ -10,7 +10,6 @@ import LoginPage from "./pages/LoginPage";
 import Courses from "./pages/Courses";
 import SignUpPage from "./pages/SignUpPage";
 import Dashboard from "./pages/Dashboard";
-import Account from "./pages/Account";
 // import CoursePage from "./pages/CoursePage";
 
 function App() {
@@ -81,7 +80,6 @@ function App() {
       <Route path="/sign-up-page" element={<SignUpPage />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/welcomepage" element={<WelcomePage />} />
-      <Route path="/account" element={<Account />} />
       {/* <Route path="/coursepage" element={<CoursePage />}/> */}
     </Routes>
   );

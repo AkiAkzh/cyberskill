@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import "./Footer.css";
 
-const Footer: FunctionComponent = () => {
+const FooterContainer: FunctionComponent = () => {
   return (
     <footer className="footer4">
       <div className="footercontainer4">
@@ -34,4 +34,4 @@ const Footer: FunctionComponent = () => {
   );
 };
 
-export default Footer;
+export default FooterContainer;
