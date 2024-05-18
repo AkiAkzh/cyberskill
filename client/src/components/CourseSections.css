@@ -1,0 +1,90 @@
+.sections {
+    text-transform: capitalize;
+  }
+  .coursesectionheading {
+    margin: 0;
+    height: 44px;
+    position: relative;
+    font-size: inherit;
+    font-weight: 500;
+    font-family: inherit;
+    display: inline-block;
+  }
+  .coursesectionheadingconainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 9px 0 0;
+  }
+  ul {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 33px;
+  }
+  .coursesectiontitle {
+    align-self: stretch;
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  .coursesectiontitlecontainer {
+    width: 100%px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px 3px 0;
+    box-sizing: border-box;
+  }
+
+  .coursesections,
+  .coursesectionslist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .coursesectionslist {
+    align-self: stretch;
+    justify-content: flex-start;
+    font-size: 25px;
+  }
+  .coursesections {
+    width: 1280px;
+    justify-content: center;
+    padding: 0 943px 0 0;
+    box-sizing: border-box;
+    gap: 5px;
+    max-width: 100%;
+    text-align: justify;
+    font-size: 35px;
+    color: #cad2e2;
+    font-family: Outfit;
+  }
+  @media screen and (max-width: 1325px) {
+    .coursesections {
+      padding-right: 471px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .coursesectionheading {
+      font-size: 28px;
+    }
+    .coursesections {
+      padding-right: 235px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .coursesectionheading {
+      font-size: 21px;
+    }
+    .coursesectiontitle
+    .coursesections {
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+  

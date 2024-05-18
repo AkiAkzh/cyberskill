@@ -1,0 +1,46 @@
+.admin-page-heading {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.admin-page-heading-wrapper,
+.admin-page-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.admin-page-heading-wrapper {
+  align-self: stretch;
+  padding: 0 80px;
+}
+.admin-page-inner {
+  padding: 0 75px;
+}
+
+.admin-page {
+  width: 100%;
+  position: relative;
+  background-color: #141d2c;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  font-size: 45px;
+  color: #fff;
+  font-family: Outfit;
+}

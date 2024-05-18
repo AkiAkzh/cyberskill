@@ -1,0 +1,48 @@
+.courses {
+  flex: 1;
+  flex-direction: column;
+  gap: 37px;
+  max-width: 100%;
+}
+.course-list,
+.courses,
+.profile-user {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.course-list {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 80px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.profile-user {
+  width: 100%;
+  position: relative;
+  background-color: #141d2c;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 80px;
+  letter-spacing: normal;
+  line-height: normal;
+}
+@media screen and (max-width: 750px) {
+  .courses {
+    gap: 18px;
+  }
+  .course-list {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  .profile-user {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .profile-user {
+    gap: 20px;
+  }
+}

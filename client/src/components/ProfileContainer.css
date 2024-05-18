@@ -1,0 +1,406 @@
+.my-profile-heading {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: inherit;
+}
+.my-profile-container {
+  width: 1281px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 45px;
+}
+.change-photo {
+  position: absolute;
+  margin: 0 !important;
+  top: 114px;
+  left: 57.5px;
+  letter-spacing: 0.06em;
+  line-height: 25.6px;
+  font-weight: 300;
+  z-index: 1;
+}
+.avatar-image-icon {
+  height: 253px;
+  width: 253px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.avatar-profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1px;
+}
+.profile-email-name {
+  position: relative;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.profile-email-name-container,
+.profile-photo-email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  color: #fff;
+}
+.profile-photo-email {
+  flex-direction: column;
+  padding: 0 68px;
+  box-sizing: border-box;
+  gap: 1px;
+  max-width: 100%;
+  text-align: center;
+  color: #9e9696;
+}
+.email-label-text {
+  position: relative;
+  font-size: 20px;
+  font-family: Outfit;
+  color: #9eb1d1;
+  text-align: left;
+  display: inline-block;
+  min-width: 55px;
+}
+.email-change-input-box {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #212e3e;
+  height: 45px;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #9eb1d1;
+  min-width: 206px;
+}
+.button-text {
+  position: relative;
+  font-size: 20px;
+  font-family: Roboto;
+  color: #0086ff;
+  text-align: center;
+  display: inline-block;
+  min-width: 34px;
+}
+.button {
+  cursor: pointer;
+  border: 2px solid #0086ff;
+  padding: 8px 17px;
+  background-color: transparent;
+  width: 73px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover{
+  background-color: #0086ff;
+  .button-text{
+    color: white;
+  }
+}
+
+.email-change-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.email-profile-container {
+  width: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+  max-width: 100%;
+}
+.password-label-text {
+  position: relative;
+  font-size: 20px;
+  font-family: Outfit;
+  color: #9eb1d1;
+  text-align: left;
+  display: inline-block;
+  min-width: 92px;
+}
+.password-change-input-box {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #212e3e;
+  height: 45px;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #9eb1d1;
+  min-width: 206px;
+}
+
+.password-change-container,
+.password-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.password-container {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+.confirm-password-label {
+  position: relative;
+  font-size: 20px;
+  font-family: Outfit;
+  color: #9eb1d1;
+  text-align: left;
+}
+.confirm-password-change-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #212e3e;
+  height: 45px;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #9eb1d1;
+  min-width: 206px;
+}
+
+.confirm-password-change-contai {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.confirm-password-profile-conta,
+.password-profile-container,
+.profile-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 405px;
+}
+.confirm-password-profile-conta {
+  width: 317px;
+  gap: 3px;
+}
+.password-profile-container,
+.profile-information-container {
+  gap: 15px;
+}
+.password-profile-container {
+  align-self: stretch;
+}
+.profile-information-container {
+  margin: 0;
+  width: 493px;
+}
+.status-label-text,
+.status-text {
+  position: relative;
+  display: inline-block;
+  min-width: 62px;
+}
+.status-text {
+  font-size: 20px;
+  font-family: Roboto;
+  color: #9eb1d1;
+  text-align: left;
+  min-width: 69px;
+}
+.status-container,
+.status-input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.status-input-box {
+  border-radius: 8px;
+  background-color: #212e3e;
+  overflow: hidden;
+  padding: 11px 14px;
+}
+.status-container {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.status-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+}
+.university-label-text {
+  position: relative;
+  display: inline-block;
+  min-width: 94px;
+}
+.university-text {
+  position: relative;
+  font-size: 20px;
+  font-family: Roboto;
+  color: #9eb1d1;
+  text-align: left;
+}
+.university-container,
+.university-input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.university-input-box {
+  flex: 1;
+  border-radius: 8px;
+  background-color: #212e3e;
+  overflow: hidden;
+  padding: 11px 14px;
+  white-space: nowrap;
+}
+.university-container {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+}
+.profile-status-university,
+.university-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.university-profile-container {
+  align-self: stretch;
+  gap: 3px;
+}
+.profile-status-university {
+  width: 205px;
+  gap: 13px;
+  color: #9eb1d1;
+}
+.profile-container,
+.profile-container-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.profile-container {
+  width: 1281px;
+  flex-wrap: wrap;
+  gap: 15px 50px;
+  min-height: 400px;
+}
+.profile-container-wrapper {
+  padding: 0 79px 0 79.5px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-family: Outfit;
+}
+@media screen and (max-width: 750px) {
+  .my-profile-heading {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .password-change-container {
+    flex-wrap: wrap;
+  }
+  .profile-container {
+    gap: 25px;
+  }
+  .profile-container-wrapper {
+    padding-left: 39px;
+    padding-right: 39px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .my-profile-heading {
+    font-size: 27px;
+    line-height: 27px;
+  }
+  .change-photo,
+  .profile-email-name {
+    font-size: 16px;
+  }
+  .profile-photo-email {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .edit-button-text,
+  .email-label-text {
+    font-size: 16px;
+  }
+  .email-change-container {
+    flex-wrap: wrap;
+  }
+  .confirm-password-change-contai {
+    flex-wrap: wrap;
+  }
+  .status-label-text,
+  .status-text,
+  .university-label-text {
+    font-size: 16px;
+  }
+}

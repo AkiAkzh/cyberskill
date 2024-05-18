@@ -10,6 +10,13 @@ import LoginPage from "./pages/LoginPage";
 import Courses from "./pages/Courses";
 import SignUpPage from "./pages/SignUpPage";
 import Dashboard from "./pages/Dashboard";
+import ProfileUser from "./pages/ProfileUser";
+import CourseInformationContainer from "./components/CourseInformationContainer";
+import CourseIntro from "./pages/CourseIntro";
+import CoursePage from "./pages/CoursePage";
+import AdminPage from "./pages/AdminPage";
+
+
 // import CoursePage from "./pages/CoursePage";
 
 function App() {
@@ -80,7 +87,10 @@ function App() {
       <Route path="/sign-up-page" element={<SignUpPage />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/welcomepage" element={<WelcomePage />} />
-      {/* <Route path="/coursepage" element={<CoursePage />}/> */}
+      <Route path="/coursepage" element={<CoursePage />}/>
+      <Route path="/courseinfo" element={ <CourseIntro/>}/>
+      <Route path="/profile" element={<ProfileUser/>}/>
+      <Route path="/admin" element={<AdminPage/>}/> 
     </Routes>
   );
 }
