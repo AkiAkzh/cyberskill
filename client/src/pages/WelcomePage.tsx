@@ -62,6 +62,7 @@ const WelcomePage: FunctionComponent = () => {
   return (
     <div className="welcome-page-main">
       <section className="welcome-page-header">
+      <NavBar/>
         <div className="welcome-page-header-container">
           <div className="welcome-page-header-photo">
             <img
@@ -83,8 +84,6 @@ const WelcomePage: FunctionComponent = () => {
             </Link>
           </div>
         </div>
-        
-        <NavBar/>
       </section>
       <section className="welcome-page-landing">
         <div className="welcome-page-landing-container">
