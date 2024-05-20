@@ -4,7 +4,7 @@
 .logo14 {
   position: relative;
   display: inline-block;
-  min-width: 103px;
+  min-width: 100px;
 }
 .about-us14,
 .courses17,
@@ -16,7 +16,7 @@
   min-width: 71px;
 }
 .about-us14 {
-  min-width: 78px;
+  min-width: 100px;
 }
 .fotterlinks4 {
   width: 439px;

@@ -5,6 +5,7 @@ import {data} from "../data"
 const CoursesList: FunctionComponent = () => {
   const [search, setSearch] = useState('')
   const [visibleCourses, setVisibleCourses] = useState(7); // начальное количество видимых курсов
+  const [selectedCategory, setSelectedCategory] = useState('All'); // начально выбран фильтр "All" категорий
 
   const showMoreCourses = () => {
     setVisibleCourses(visibleCourses + 7); // увеличиваем количество видимых курсов на 7
@@ -13,6 +14,10 @@ const CoursesList: FunctionComponent = () => {
 
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
+  };
+
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCategory(e.target.value);
   };
   return (
     
@@ -33,10 +38,11 @@ const CoursesList: FunctionComponent = () => {
             <button className={selectedFilter === 'Hard' ? 'filter-option-selected' : 'filter-option'} onClick={() => handleFilterChange('Hard')}>
               <div className={selectedFilter === 'Hard' ? "option-label-selected" : 'option-label'}>Hard</div>
             </button>
-            <select className="course-category">
+            <select className="course-category" onChange={handleCategoryChange}>
               <option value="All">All</option>
               <option value="Pentest">Pentest</option>
               <option value="Cryptography">Cryptography</option>
+              <option value="Network Security">Network Security</option>
             </select>
           </div>
         </div>
@@ -69,6 +75,7 @@ const CoursesList: FunctionComponent = () => {
       <div className="courses-list-container">
       { data
       .filter(item => selectedFilter === 'All' ? true : item.Difficulty === selectedFilter)
+      .filter(item => selectedCategory === "All" ? true : item.Category === selectedCategory)
       .filter((item) => {
           return search.toLowerCase() === '' ? item : item.Title.toLowerCase().includes(search.toLowerCase());
         }).slice(0, visibleCourses).map((item) => (
@@ -96,20 +103,30 @@ const CoursesList: FunctionComponent = () => {
               </div>
             </div>
           </div>
-          <div className="Difficulty-wrapper">
-            <div className="Difficulty-label">Difficulty:</div>
-            <div className={`${item.Difficulty}-color-difficult`}>
-                <div className={`${item.Difficulty}-label`}>
-                  {item.Difficulty}
+          <div className="Difficulty-Category">
+                <div className="Difficulty-wrapper">
+                  <div className="Difficulty-label">Difficulty:</div>
+                  <div className={`${item.Difficulty}-color-difficult`}>
+                    <div className={`${item.Difficulty}-label`}>
+                      {item.Difficulty}
+                    </div>
+                  </div>
                 </div>
-          </div>
-          </div>
+                <div className="Category-wrapper">
+                  <div className="Category-label">Category:</div>
+                  <div className="Category-color">
+                    <div className="Category-block">
+                      {item.Category}
+                    </div>
+                  </div>
+                </div>
+              </div>
           <div className="continue-remove-container">
             <button className="continue-button-container">
               <div className="continue-label">continue</div>
             </button>
-            <button className="remove-button-container">
-                <div className="remove-label">Remove</div>
+            <button className="start-course-button-container">
+                <div className="start-course-label">Start Course</div>
             </button>
           </div>
         </div>

@@ -2,14 +2,13 @@
   
   width: 1320px;
   flex-direction: column;
-  padding: 0 20px;
+
   gap: 29px;
   max-width: 100%;
   text-align: left;
   font-size: 45px;
   color: #fff;
   font-family: Roboto;
-
   
   display: flex;
   align-items: flex-start;
@@ -23,9 +22,8 @@
   
   align-self: stretch;
   flex-direction: row;
-  padding: 0 70px;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -36,7 +34,6 @@
   flex: 1;
   flex-direction: column;
   gap: 28px;
-
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -59,37 +56,24 @@
   flex: 1;
   justify-content: space-between;
   gap: 20px;
-
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   max-width: 100%;
 }
 /*Filter button START*/
 .filter-option-selected{
-  
   cursor: pointer;
-  border: 0;
-  padding: 10px 21px;
+  border: 2px solid #0086ff;
+  padding: 7px;
   background-color: #0086ff;
+  width: 108px;
   border-radius: 8px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-.filter-option-selected:hover{
-  background-color: #1aa1ff;
-}
-.option-label-selected{
-  position: relative;
-  font-size: 25px;
-  font-family: Roboto;
-  color: #fff;
-  text-align: center;
-  display: inline-block;
-  min-width: 29px;
 }
 
 .filter-option{
@@ -106,12 +90,6 @@
   justify-content: flex-start;
 }
 
-.filter-option:hover{
-  background-color: rgba(26, 161, 255, 0.09);
-  border: 2px solid #1aa1ff;
-  box-sizing: border-box;
-}
-
 .option-label{
   position: relative;
   font-size: 25px;
@@ -121,6 +99,28 @@
   display: inline-block;
   min-width: 75px;
 }
+
+.option-label-selected{
+  position: relative;
+  font-size: 25px;
+  font-family: Roboto;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  min-width: 75px;
+}
+
+.filter-option-selected:hover{
+  background-color: #1aa1ff;
+}
+
+.filter-option:hover{
+  background-color: rgba(26, 161, 255, 0.09);
+  border: 2px solid #1aa1ff;
+  box-sizing: border-box;
+}
+
+
 /*Filter button END*/
 
 .Search-wrapper{
@@ -263,7 +263,6 @@
   padding: 12px 19px;
   box-sizing: border-box;
   gap: 10px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -286,6 +285,7 @@
 .Course-title-label{
   position: relative;
   font-weight: 600;
+  max-width: 250px;
 
 }
 .Description-wrapper{
@@ -294,17 +294,17 @@
   align-items: center;
   justify-content: center;
   padding: 0 10px 0 0;
-  font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
 }
 .Description-label{
   width: 244.4px;
   position: relative;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 140%;
   display: inline-block;
   flex-shrink: 0;
   max-height: 72px;
-  word-break: break-word;
+  word-break: break-word
 }
 .Author-info-wrapper{
   gap: 6px;
@@ -332,13 +332,53 @@
   display: inline-block;
   min-width: 73px;
 }
-
-.Difficulty-wrapper{
+.Difficulty-Category{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  gap: 15px;
+}
 
+.Category-wrapper{
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Category-label{
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+
+}
+
+.Category-color{
+  border-radius: 5px;
+  background-color: rgba(0, 134, 255, 0.55);
+  color: #0086ff;
+  justify-content: center;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.Category-block{
+  position: relative;
+  display: inline-block;
+  min-width: 67px;
+  font-weight: 600;
+  min-width: 32px;
+  
+}
+
+.Difficulty-wrapper{
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  
 }
 
 .Difficulty-label{
@@ -354,7 +394,6 @@
   justify-content: center;
   padding: 3px;
   color: #47ed2b;
-  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -363,10 +402,13 @@
   position: relative;
   display: inline-block;
   min-width: 67px;
-  
   font-weight: 600;
   min-width: 32px;
 }
+
+
+
+
 .Medium-color-difficult{
 
   border-radius: 5px;
@@ -406,7 +448,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
   align-self: stretch;
   gap: 8px;
 }
@@ -416,16 +457,16 @@
   padding: 8.5px 76px;
   background-color: #0086ff;
   border-radius: 10px;
-  
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
-.continue-remove-container:hover{
+
+.continue-button-container:hover{
   background-color: #1aa1ff;
 }
+
 
 .continue-label{
   position: relative;
@@ -447,15 +488,17 @@
   background-color: #dc3545;
   align-self: stretch;
   border-radius: 10px;
-  
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
+.remove-button-container:hover{
+  background-color: #f84052;
+}
+
 .remove-label{
-  
   position: relative;
   font-size: 20px;
   letter-spacing: 0.05em;
@@ -463,6 +506,39 @@
   font-weight: 600;
   font-family: Roboto;
   color: #fff;
+  text-align: center;
+  display: inline-block;
+  min-width: 90px;
+}
+
+.start-course-button-container{
+  cursor: pointer;
+  border: 1px solid #000000;
+  padding: 8.5px 20px;
+  background-color: transparent;
+  align-self: stretch;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-course-button-container:hover{
+  background-color: #000000;
+  .start-course-label{
+    color: #fff;
+  }
+}
+
+.start-course-label{
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Roboto;
+  color: #000000;
   text-align: center;
   display: inline-block;
   min-width: 90px;

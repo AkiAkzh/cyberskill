@@ -12,7 +12,6 @@ import Courses from "./pages/Courses";
 import SignUpPage from "./pages/SignUpPage";
 import Dashboard from "./pages/Dashboard";
 import ProfileUser from "./pages/ProfileUser";
-import CourseInformationContainer from "./components/CourseInformationContainer";
 import CourseIntro from "./pages/CourseIntro";
 import CoursePage from "./pages/CoursePage";
 import AdminPage from "./pages/AdminPage";

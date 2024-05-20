@@ -55,10 +55,10 @@
 .category-type {
   border-radius: 5px;
   background-color: rgba(0, 134, 255, 0.55);
+  color: #0086ff;
   justify-content: center;
   padding: 3px 4.5px;
   white-space: nowrap;
-  color: #0086ff;
   font-family: Roboto;
 }
 .category-container {

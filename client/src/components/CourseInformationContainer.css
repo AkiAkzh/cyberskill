@@ -148,6 +148,7 @@ ul {
   font-family: Roboto;
   color: #fff;
   text-align: center;
+  text-decoration: none;
 }
 .arrowicon {
   width: 17px;
@@ -168,6 +169,7 @@ ul {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 .startlearningcontainer {
   gap: 3px;
@@ -179,6 +181,11 @@ ul {
   background-color: #47dd00;
   border-radius: 10px;
 }
+
+.startlearningbutton:hover{
+  background-color: #64eb25;
+}
+
 .continuebuttontext {
   flex: 1;
   position: relative;
