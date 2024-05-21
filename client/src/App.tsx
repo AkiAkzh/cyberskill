@@ -17,7 +17,6 @@ import CoursePage from "./pages/CoursePage";
 import AdminPage from "./pages/AdminPage";
 
 
-// import CoursePage from "./pages/CoursePage";
 
 function App() {
   const action = useNavigationType();

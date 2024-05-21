@@ -193,14 +193,16 @@
 .blank-line,
 .course-section-paragraph {
   margin: 0;
-}
-.course-section-paragraph-container {
   width: 1217px;
   position: relative;
   line-height: 160%;
   display: inline-block;
-  max-height: 232px;
+  max-height: fit-content;
   word-break: break-word;
+  
+}
+b {
+  font-weight: 500;
 }
 .image1-icon {
   width: 346px;
@@ -232,6 +234,12 @@ ul {
   font-size: inherit;
   padding-left: 24px;
 }
+
+ol {
+  margin: 0;
+  font-size: inherit;
+  padding-left: 24px;
+}
 .questions-heading {
   position: relative;
   font-size: 20px;
@@ -241,32 +249,41 @@ ul {
   display: inline-block;
   min-width: 90px;
 }
-.question-text {
-  align-self: stretch;
-  position: relative;
-  line-height: 29px;
-}
+
 .answer-box-input-field {
-  width: 100%;
   border: 0;
-  outline: 0;
   background-color: #212e3e;
+  outline: 0;
   height: 43px;
   flex: 1;
   border-radius: 8px;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 11px 14px;
-  box-sizing: border-box;
+  min-width: 635px;
+  max-width: 100%;
   font-family: Roboto;
   font-size: 18px;
   color: #9eb1d1;
-  min-width: 250px;
-  max-width: calc(100% - 240px);
+  overflow: scroll;
+  padding-left: 15px;
 }
+
+.answer-box-input-field-textarea {
+  border: 0;
+  background-color: #212e3e;
+  outline: 0;
+  height: 200px;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 635px;
+  max-width: 100%;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #9eb1d1;
+  overflow: scroll;
+  padding-left: 15px;
+}
+
 .submit-button-text {
   position: relative;
   font-size: 20px;
@@ -328,26 +345,25 @@ ul {
 .question-box-container {
   align-self: stretch;
   display: flex;
-  justify-content: flex-start;
   max-width: 100%;
 }
 .anser-box-container {
-  height: 40px;
   flex-direction: row;
-  align-items: center;
-  padding: 0;
-  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
   gap: 15px;
 }
 .question-box-container {
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 4px;
 }
 
 .questions-container {
   align-items: flex-start;
-  gap: 15.5px;
+  gap: 20px;
 }
 .course-section-dropdown-container,
 .questions-container {
@@ -356,6 +372,7 @@ ul {
   flex-direction: column;
   justify-content: flex-start;
   max-width: 100%;
+  
 }
 .course-section-dropdown-container {
   border-radius: 5px;
@@ -365,11 +382,12 @@ ul {
   overflow: hidden;
   align-items: center;
   padding: 40px 30px;
-  gap: 48px;
+  gap: 20px;
   font-size: 18px;
   font-family: Roboto;
   margin-bottom: 20px;
   margin-top: -20px;
+  text-align: justify;
 }
 
 
@@ -388,7 +406,6 @@ ul {
   align-items: flex-start;
   padding: 0 20px;
   box-sizing: border-box;
-
   max-width: 100%;
 }
 .course-page {
@@ -400,4 +417,5 @@ ul {
   gap: 43px;
   letter-spacing: normal;
   line-height: normal;
+  font-family: Roboto;
 }
