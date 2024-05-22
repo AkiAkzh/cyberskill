@@ -199,7 +199,7 @@
   display: inline-block;
   max-height: fit-content;
   word-break: break-word;
-  
+ 
 }
 b {
   font-weight: 500;
@@ -235,11 +235,6 @@ ul {
   padding-left: 24px;
 }
 
-ol {
-  margin: 0;
-  font-size: inherit;
-  padding-left: 24px;
-}
 .questions-heading {
   position: relative;
   font-size: 20px;
@@ -361,6 +356,10 @@ ol {
   gap: 4px;
 }
 
+.question-text {
+  line-height: 160%;
+}
+
 .questions-container {
   align-items: flex-start;
   gap: 20px;
@@ -418,4 +417,57 @@ ol {
   letter-spacing: normal;
   line-height: normal;
   font-family: Roboto;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #141d2c;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  width: 450px;
+  height: auto;
+  max-width: 80%;
+  overflow-wrap: break-word;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  background: none;
+
+}
+
+.alert-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgb(253, 229, 235);
+  border: 2px solid rgb(235, 0, 55);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it appears above other elements */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-message {
+  margin: 0;
+  font-size: 20px;
 }

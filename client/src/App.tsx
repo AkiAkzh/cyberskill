@@ -15,7 +15,8 @@ import ProfileUser from "./pages/ProfileUser";
 import CourseIntro from "./pages/CourseIntro";
 import CoursePage from "./pages/CoursePage";
 import AdminPage from "./pages/AdminPage";
-
+import Course_page_test from "./pages/course_page_test";
+import CoursePagePentest from "./pages/CoursePagePentest";
 
 
 function App() {
@@ -91,6 +92,9 @@ function App() {
         <Route path="/courseinfo" element={<CourseIntro />} />
         <Route path="/profile" element={<ProfileUser />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/course_page_test" element={<Course_page_test />} />
+        <Route path="/course-page-pentest" element={<CoursePagePentest />} />
+        
       </Routes>
     </LanguageProvider>
   );

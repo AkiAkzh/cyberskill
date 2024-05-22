@@ -3,6 +3,14 @@ import NavBar from "../components/NavBar";
 import FooterContainer from "../components/FooterContainer";
 import "./CoursePage.css";
 
+const HintPopup: FunctionComponent<{ hint: string, onClose: () => void }> = ({ hint, onClose }) => (
+  <div className="popup">
+    <div className="popup-content">
+    <button className="close-button" onClick={onClose}>&times;</button>
+      <p>{hint}</p>
+    </div>
+  </div>
+);
 
 const CoursePage: FunctionComponent = () => {
   const [isOpenArray, setIsOpenArray] = useState(new Array(3).fill(false));
@@ -12,6 +20,21 @@ const CoursePage: FunctionComponent = () => {
     updatedIsOpenArray[index] = !updatedIsOpenArray[index];
     setIsOpenArray(updatedIsOpenArray);
   };
+
+  const [hintPopupVisible, setHintPopupVisible] = useState(false);
+  const [hintText, setHintText] = useState("");
+
+  const showHint = (hint: string) => {
+    setHintText(hint);
+    setHintPopupVisible(true);
+  };
+
+  const closeHintPopup = () => {
+    setHintPopupVisible(false);
+    setHintText("");
+  };
+
+  
 
   return (
     <div className="course-page">
@@ -92,11 +115,10 @@ const CoursePage: FunctionComponent = () => {
               need to know what your adversary will discover about your
               systems and networks.
             </p>
-            <p className="blank-line">&nbsp;</p>
+            
             <p className="course-section-paragraph">
-              Reconnaissance <i className="recon"> (recon) </i> can be defined as a preliminary survey to gather information
-              about a target. It is the first step in
-              <b className="the-unified-kill">The Unified Kill Chain</b> to gain an initial foothold on a system. We divide reconnaissance into:
+              Reconnaissance <i> (recon) </i> can be defined as a preliminary survey to gather information
+              about a target. It is the first step in <b > The Unified Kill Chain </b> to gain an initial foothold on a system. We divide reconnaissance into:
               <ol className="">
                 <li className="">
                   Passive Reconnaissance
@@ -106,7 +128,6 @@ const CoursePage: FunctionComponent = () => {
                 </li>
               </ol>
             </p>
-
 
             <img
               className="image2-icon"
@@ -138,7 +159,6 @@ const CoursePage: FunctionComponent = () => {
               </ul>
             </p>
 
-
             <div className="questions-container">
               <div className="questions-heading">Questions</div>
               <div className="question-box-container">
@@ -155,7 +175,7 @@ const CoursePage: FunctionComponent = () => {
                   <button className="submit-button">
                     <div className="submit-button-text">Submit</div>
                   </button>
-                  <button className="hint-button">
+                  <button className="hint-button" onClick={() => showHint("Hint: The country is in Asia.")}>
                     <div className="hint-button-text">Hint</div>
                   </button>
                 </div>
@@ -174,7 +194,7 @@ const CoursePage: FunctionComponent = () => {
                   <button className="submit-button">
                     <div className="submit-button-text">Submit</div>
                   </button>
-                  <button className="hint-button">
+                  <button className="hint-button" onClick={() => showHint("Hint:Hint:Hint:Hint:Hint:HintHintHintHintHintHintHintHintHint:")}>
                     <div className="hint-button-text">Hint</div>
                   </button>
                 </div>
@@ -252,8 +272,8 @@ const CoursePage: FunctionComponent = () => {
                   <button className="submit-button">
                     <div className="submit-button-text">Submit</div>
                   </button>
-                  <button className="hint-button">
-                    <div className="hint-button-text">Hint</div>
+                  <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
+                    <div className="hint-button-text" >Hint</div>
                   </button>
                 </div>
               </div>
@@ -270,7 +290,7 @@ const CoursePage: FunctionComponent = () => {
                   <button className="submit-button">
                     <div className="submit-button-text">Submit</div>
                   </button>
-                  <button className="hint-button">
+                  <button className="hint-button" onClick={() => showHint("Hint: Use a library like PyCryptodome for Python.")}>
                     <div className="hint-button-text">Hint</div>
                   </button>
 
@@ -301,6 +321,7 @@ const CoursePage: FunctionComponent = () => {
         )}
       </main>
       {/* Course sections Container END */}
+      {hintPopupVisible && <HintPopup hint={hintText} onClose={closeHintPopup} />}
       <FooterContainer />
     </div>
   );

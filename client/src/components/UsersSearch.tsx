@@ -77,7 +77,7 @@ const UsersSearch: FunctionComponent = () => {
                 <div className="reset-password-button-text">Reset password</div>
               </button>
               <button className="view-profile-button">
-                <div className="view-profile-button-text ">View profile</div>
+                <div className="view-profile-button-text ">View</div>
               </button>
               <button className="delete-user-button">
                 <div className="delete-user-button-text">Delete</div>
@@ -99,37 +99,3 @@ const UsersSearch: FunctionComponent = () => {
 
 export default UsersSearch;
 
-{/* <div className="user-row">
-<div className="user-avatar">
-  <img className="avatar-icon1" alt="" src="/avatar-2@2x.png" />
-</div>
-<div className="user-email">testemail@oulook.com</div>
-<div className="user-role">Creator</div>
-<div className="user-university">Nazarbayev University</div>
-<button className="reset-password-button">
-  <div className="reset-password-button-text">Reset password</div>
-</button>
-<button className="view-profile-button">
-  <div className="view-profile-button-text">View profile</div>
-</button>
-<button className="delete-user-button">
-  <div className="delete-user-button-text">Delete</div>
-</button>
-</div>
-<div className="user-row">
-<div className="user-avatar">
-  <img className="avatar-icon1" alt="" src="/avatar-2@2x.png" />
-</div>
-<div className="user-email">administrator@gmail.com</div>
-<div className="user-role">Admin</div>
-<div className="user-university">CyberSkills</div>
-<button className="reset-password-button">
-  <div className="reset-password-button-text">Reset password</div>
-</button>
-<button className="view-profile-button">
-  <div className="view-profile-button-text">View profile</div>
-</button>
-<button className="delete-user-button">
-  <div className="delete-user-button-text">Delete</div>
-</button>
-</div> */}
