@@ -1,9 +1,16 @@
-import React,{ FunctionComponent } from "react";
+import React,{ FunctionComponent, useContext, useState } from "react";
 import "./SignUpForm.css";
 import { Link } from "react-router-dom";
+import { Context } from "..";
+import { observer } from "mobx-react-lite";
 
 const SignUpForm: FunctionComponent = () => {
-  return (
+
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const {store} = useContext(Context);
+
+    return (
     <div className="form6">
       <form className="email-fieldset">
         <b className="create-account1">Create Account</b>
@@ -11,6 +18,8 @@ const SignUpForm: FunctionComponent = () => {
           <div className="form-fields3">
             <div className="email3">
               <input
+                onChange={e => setEmail(e.target.value)}
+                value={email}
                 className="email-address3"
                 placeholder="Email address"
                 type="email"
@@ -19,22 +28,17 @@ const SignUpForm: FunctionComponent = () => {
             </div>
             <div className="password6">
               <input
+                onChange={e => setPassword(e.target.value)}
+                value={password}
                 className="password7"
                 placeholder="Password"
                 type="password"
               />
               <img className="iconpassword4" alt="" src="/iconpassword.svg" />
             </div>
-            <div className="confirm-password3">
-              <input
-                className="confirm-password4"
-                placeholder="Confirm password"
-                type="password"
-              />
-              <img className="iconpassword5" alt="" src="/iconpassword.svg" />
-            </div>
+            
           </div>
-          <button className="beginlearningbutton7">
+          <button onClick={() => store.registration(email,password)}  className="beginlearningbutton7">
             <div className="login10">Sign up</div>
           </button>
         </form>
@@ -48,4 +52,4 @@ const SignUpForm: FunctionComponent = () => {
   );
 };
 
-export default SignUpForm;
+export default observer(SignUpForm);
