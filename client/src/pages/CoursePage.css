@@ -194,12 +194,28 @@
 .course-section-paragraph {
   margin: 0;
   width: 1217px;
-  font-size: 18px;
+  font-size: 17px;
   position: relative;
   line-height: 160%;
   display: inline-block;
   max-height: fit-content;
   word-break: break-word;
+}
+
+.highlights {
+  background-color: #fff;
+  color: #141d2c;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.gray-comment {
+  color: gray;
+}
+
+hr {
+  width: 1217px;
 }
 
 li {
@@ -235,26 +251,37 @@ b {
 
 
 .image2-icon {
-  width: 30%;
-  max-height: 30%;
+  width: 20%;
+  max-height: 20%;
   position: relative;
   object-fit: cover;
   max-width: 100%;
 }
 
 .image {
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   position: relative;
   object-fit: cover;
 }
 
+.image-big {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: underline;
+  color: #fff;
+}
 
 .questions-heading {
   position: relative;
   font-size: 20px;
   line-height: 160%;
-  font-weight: 500;
+  font-weight: 600;
   font-family: Roboto;
   display: inline-block;
   min-width: 90px;
@@ -377,7 +404,7 @@ b {
 
 .questions-container {
   align-items: flex-start;
-  gap: 20px;
+  gap: 30px;
 }
 .course-section-dropdown-container,
 .questions-container {
