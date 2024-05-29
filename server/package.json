@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "child_process": "^1.0.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -22,7 +23,8 @@
     "nodemailer": "^6.9.13",
     "pg": "^8.11.5",
     "pg-promise": "^11.6.0",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vm2": "^3.9.19"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
