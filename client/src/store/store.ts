@@ -5,6 +5,7 @@ import axios from "axios";
 import { AuthResponse } from "../models/response/AuthResponse";
 import { API_URL } from "../http";
 import UserService from "../services/UserServies";
+import CourseService from "../services/CourseServies";
 
 
 
@@ -81,6 +82,17 @@ export default class Store{
         try {
             const response = await UserService.profileUser(); 
             return response.data;
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    async answerSumbit(code : string, Prolanguage: string){
+        try {
+            const response = await CourseService.submitAnswer(code,Prolanguage);
+            console.log(response)
+            
+            
         } catch (e) {
             console.log(e)
         }
