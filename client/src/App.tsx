@@ -25,19 +25,16 @@ import CoursePagePentest from "./pages/CoursePagePentest";
 function App() {
   const{store} = useContext(Context);
 
-  useEffect( ()=>{
-    if(localStorage.getItem('token')){
-      store.checkAuth()
-    }
-  },[])
+  
+  
   return (
 
     <LanguageProvider>
-      <Routes>
-        <Route path="/" element={<WelcomePage />} />
-        <Route path="/login-page" element={<LoginPage />} />
+      <Routes >
+        <Route path="/" element={<WelcomePage/>}/>
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/sign-up-page" element={<SignUpPage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/welcomepage" element={<WelcomePage />} />
         <Route path="/coursepage" element={<CoursePage />} />

@@ -4,12 +4,14 @@ import AuthService from "../services/AuthService";
 import axios from "axios";
 import { AuthResponse } from "../models/response/AuthResponse";
 import { API_URL } from "../http";
+import UserService from "../services/UserServies";
 
 
 
 export default class Store{
     user = {} as IUser;
     isAuth = false;
+    isLoading = false;
 
     constructor(){
         makeAutoObservable(this);
@@ -21,6 +23,9 @@ export default class Store{
 
     setUser(user : IUser){
         this.user = user;
+    }
+    setLoading(bool : boolean){
+        this.isLoading = bool;
     }
 
     async login(email :  string, password : string){
@@ -67,6 +72,15 @@ export default class Store{
 
             this.setAuth(true);
             this.setUser(response.data.user);
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    async profileUser(){
+        try {
+            const response = await UserService.profileUser(); 
+            return response.data;
         } catch (e) {
             console.log(e)
         }

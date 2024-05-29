@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import NavBar from "../components/NavBar";
 import SignUpForm from "../components/SignUpForm";
 import "./SignUpPage.css";
+import { observer } from "mobx-react-lite";
 
 const SignUpPage: FunctionComponent = () => {
   return (
@@ -17,4 +18,4 @@ const SignUpPage: FunctionComponent = () => {
   );
 };
 
-export default SignUpPage;
+export default observer(SignUpPage);

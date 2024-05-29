@@ -65,6 +65,23 @@ class UserController {
             next(e);
         }
     }
+
+    async update(req, res, next){
+        try {
+            const user = await userService.updateUser();
+        } catch (e) {
+            next(e);
+        }
+    }
+    async profileUser(req, res, next){
+        try {
+            const {refreshToken} = req.cookies;
+            const user = await userService.getProfile(refreshToken);
+            return res.json(user)
+        } catch (e) {
+            next(e);
+        }
+    }
 }
 
 module.exports = new UserController();

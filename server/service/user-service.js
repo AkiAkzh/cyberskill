@@ -5,6 +5,7 @@ const mailService = require('./mail-service')
 const tokenService = require('./token-service');
 const UserDto = require('../dtos/user-dto');
 const ApiError = require('../exceptions/api-error');
+const token_model = require('../models/token_model');
 
 class UserService {
     async registration(email, password){
@@ -16,7 +17,7 @@ class UserService {
         const activationLink = uuid.v4();
 
         const user = await UserModel.create({email, password: hashPassword, activationLink })
-        await mailService.sendActivationLink(email,`${process.env.API_URL}/api/activate/${activationLink}`);
+        // await mailService.sendActivationLink(email,`${process.env.API_URL}/api/activate/${activationLink}`);
 
         const userDto = new UserDto(user); // id, email, isActivated
         const tokens = tokenService.generateTokens({...userDto});
@@ -76,6 +77,20 @@ class UserService {
     async getAllUsers(){
         const users = await UserModel.find();
         return users;
+    }
+
+    async updateUser(email, refreshToken, userPUT){
+        const user = await UserModel.findOne({email});
+        
+    }
+
+    async getProfile(userToken){
+        const userData= await tokenService.findToken(userToken);
+        const user = await UserModel.findById(userData);
+        if( !user ){
+            throw ApiError.BadRequest();
+        }
+        return {user};
     }
 }
 
