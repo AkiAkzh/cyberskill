@@ -1,9 +1,22 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useContext, useState } from "react";
 import "./ProfileContainer.css";
+import { Context } from "..";
+import UserService from "../services/UserServies";
+import { IUser } from "../models/IUser";
 
 const FrameComponent: FunctionComponent = () => {
+  const {store} = useContext(Context);
+  const [email, setEmail] = useState<string>('');
+  const [password, serPassword] = useState<string>('');
+  async function getpro(){
+    const response = await UserService.profileUser()
+    setEmail(response.data.email) 
+   }
+  getpro()
+  
+  console.log(email)
   return (
-    <section className="profile-container-wrapper">
+     <section className="profile-container-wrapper">
       <div className="profile-container">
         <div className="my-profile-container">
           <h1 className="my-profile-heading">My Profile</h1>
@@ -18,7 +31,7 @@ const FrameComponent: FunctionComponent = () => {
             />
           </div>
           <div className="profile-email-name-container">
-            <div className="profile-email-name">212456@astanait.edu.kz</div>
+            <div className="profile-email-name">{email}</div>
           </div>
         </div>
         <form className="profile-information-container">

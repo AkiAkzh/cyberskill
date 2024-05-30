@@ -24,27 +24,24 @@ import CoursePageCryptography from "./pages/CoursePageCryptography";
 function App() {
   const{store} = useContext(Context);
 
-  useEffect( ()=>{
-    if(localStorage.getItem('token')){
-      store.checkAuth()
-    }
-  },[])
+  
+  
   return (
 
     <LanguageProvider>
-      <Routes>
-        <Route path="/" element={<WelcomePage />} />
-        <Route path="/login-page" element={<LoginPage />} />
+      <Routes >
+        <Route path="/" element={<WelcomePage/>}/>
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/sign-up-page" element={<SignUpPage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/welcomepage" element={<WelcomePage />} />
         <Route path="/coursepage" element={<CoursePage />} />
         <Route path="/course-info-pentest" element={<CourseIntroPentest />} />
         <Route path="/profile" element={<ProfileUser />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/course-page-pentest" element={<CoursePagePentest />} />
-        <Route path="/course-page-cryptography" element={<CoursePageCryptography />} />
+        <Route path="/course/pentest" element={<CoursePagePentest />} />
+        <Route path="/course/cryptography" element={<CoursePageCryptography />} />
       </Routes>
     </LanguageProvider>
   );

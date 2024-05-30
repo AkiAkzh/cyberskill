@@ -9,10 +9,12 @@ const SignUpForm: FunctionComponent = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const {store} = useContext(Context);
-
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  }
     return (
-    <div className="form6">
-      <form className="email-fieldset">
+    <div className="form6" >
+      <form className="email-fieldset" onSubmit={handleSubmit}>
         <b className="create-account1">Create Account</b>
         <form className="form7">
           <div className="form-fields3">
@@ -46,7 +48,7 @@ const SignUpForm: FunctionComponent = () => {
       <div className="form-child" />
       <div className="i-already-have-container1">
         <span>{`I already have an account. `}</span>
-        <Link to="/login-page"><span className="login11">Login</span></Link>
+        <Link to="/login"><span className="login11">Login</span></Link>
       </div>
     </div>
   );

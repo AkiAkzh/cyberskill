@@ -1,18 +1,32 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useContext, useState } from "react";
 import NavBar from "../components/NavBar";
 import FooterContainer from "../components/FooterContainer";
 import "./CoursePage.css";
+import { Context } from "..";
 
 const HintPopup: FunctionComponent<{ hint: string, onClose: () => void }> = ({ hint, onClose }) => (
   <div className="popup">
     <div className="popup-content">
-    <button className="close-button" onClick={onClose}>&times;</button>
+      <button className="close-button" onClick={onClose}>&times;</button>
       <p>{hint}</p>
     </div>
   </div>
 );
 
 const CoursePageCryptography: FunctionComponent = () => {
+  const [code, setCode] = useState('');
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
+  const [Prolanguage, setProLanguage] = useState('python');
+  const {store} = useContext(Context);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    store.answerSumbit(code, Prolanguage)
+
+  };
+
   const [isOpenArray, setIsOpenArray] = useState(new Array(3).fill(false));
 
   const toggleSection = (index: number) => {
@@ -34,7 +48,7 @@ const CoursePageCryptography: FunctionComponent = () => {
     setHintText("");
   };
 
-  
+
 
   return (
     <div className="course-page">
@@ -129,17 +143,26 @@ const CoursePageCryptography: FunctionComponent = () => {
 
               <div className="question-box-container">
                 <div className="question-text">
-                  Реализуйте симметричное шифрование и дешифрование с использованием алгоритма Цезаря. Напишите программу на любом языке программирования, которая принимает текст и ключ смещения, шифрует текст и затем расшифровывает его.
+                   Реализуйте симметричное шифрование и дешифрование с использованием алгоритма Цезаря. Напишите программу на любом языке программирования, которая принимает текст и ключ смещения, шифрует текст и затем расшифровывает его.
                 </div>
-                <div className="anser-box-container">
-                  <textarea className="answer-box-input-field-textarea" />
-                  <button className="submit-button">
+                <form className="anser-box-container" onSubmit={handleSubmit}>
+                  <textarea className="answer-box-input-field-area" 
+                      value={code}
+                      onChange={ (e) => setCode(e.target.value)}
+                  />
+                  <button className="submit-button" >
                     <div className="submit-button-text">Submit</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
                   </button>
-                </div>
+                  <select value={Prolanguage}
+                   onChange={(e) => setProLanguage(e.target.value as 'python'|| 'java' || 'cpp')}>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                  </select>
+                </form>
               </div>
               <div className="question-box-container">
                 <div className="question-text">
