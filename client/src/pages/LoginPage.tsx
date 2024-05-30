@@ -1,16 +1,28 @@
-import React,{ FunctionComponent, useContext, useState } from "react";
+import React,{ FormEvent, FunctionComponent, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginPage.css";
 import { Context } from "..";
 import { observer } from "mobx-react-lite";
 import NavBar from "../components/NavBar";
+import axios from "axios";
 
 const LoginPage: FunctionComponent = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState(' ');
   const {store} = useContext(Context);
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit =  async (e : FormEvent)  => {
+    e.preventDefault();
+
+        try {
+            store.login(email, password);
+        } catch (err) {
+            if (axios.isAxiosError(err) && err.response) {
+              setError(err.response.data.message);
+          } else {
+              setError('An unexpected error occurred');
+          }
+        }
   }
   return (
     <div className="login-page">
@@ -50,7 +62,8 @@ const LoginPage: FunctionComponent = () => {
                       />
                     </div>
                   </div>
-                  <button onClick={() => store.login(email,password)} className="beginlearningbutton">
+                  {error}
+                  <button className="beginlearningbutton">
                     <div className="login1">Login</div>
                   </button>
                 </form>

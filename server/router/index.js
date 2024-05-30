@@ -19,6 +19,6 @@ router.get('/refresh', userController.resresh);
 router.get('/users', authMiddleware, userController.getUsers);
 router.post('/user/update', userController.update);
 router.get('/profile', userController.profileUser)
-router.post('/submit', courseController.userAnswer)
+router.post('/submit', authMiddleware ,courseController.userAnswer)
 
 module.exports = router
