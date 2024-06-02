@@ -11,7 +11,10 @@ const errorMiddleware = require("./middlewares/error-middleware");
 
 const PORT = process.env.PORT || 5400;
 const app = express()
-
+app.use(cors({
+    credentials: true,
+    origin : process.env.CLIENT_URL
+}));
 app.use(helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
@@ -28,7 +31,7 @@ app.use(helmet.contentSecurityPolicy({
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 минут
-    max: 100, // лимит каждого IP до 100 запросов за окно времени (15 минут)
+    max: 650, // лимит каждого IP до n запросов за окно времени (15 минут)
     message: 'Слишком много запросов с этого IP, пожалуйста, попробуйте позже.'
 });
 
@@ -37,10 +40,7 @@ app.use(xssClean());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors({
-    credentials: true,
-    origin : process.env.CLIENT_URL
-}));
+
 app.use('/api', router);
 app.use(errorMiddleware);
 

@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import FooterContainer from "../components/FooterContainer";
 import CoursesList from "../components/CoursesList"
 import "./Courses.css";
+import { observer } from "mobx-react-lite";
 
 const Courses: FunctionComponent = () => {
   return (

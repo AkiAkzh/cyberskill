@@ -1,23 +1,48 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useContext, useEffect, useState } from "react";
 import "./MyCoursesBlock.css";
-import {data} from "../data"
+import { CourseInfo } from "../models/CourseInfo";
+import CourseService from "../services/CourseServies";
+import { IUser } from "../models/IUser";
+import { Context } from "..";
+import { redirect } from "react-router-dom";
+import { CLIENT_URL } from "../http";
 
 const CoursesList: FunctionComponent = () => {
   const [search, setSearch] = useState('')
   const [visibleCourses, setVisibleCourses] = useState(7); // начальное количество видимых курсов
   const [selectedCategory, setSelectedCategory] = useState('All'); // начально выбран фильтр "All" категорий
+  const [course, setCourses] = useState<CourseInfo[]>([]);
+  const [user, setUser] = useState<IUser>();
+  const [selectedFilter, setSelectedFilter] = useState('All'); // начально выбран фильтр "All"
 
+  const {store} = useContext(Context);
+  useEffect( ()=>{
+    if(store.isAuth){
+    setUser(store.user);
+    }
+    
+    async function fetchData() {
+      const response = await CourseService.getAllCourses();
+      setCourses(response.data);
+    }
+    fetchData();
+  },[])
+  
   const showMoreCourses = () => {
     setVisibleCourses(visibleCourses + 7); // увеличиваем количество видимых курсов на 7
   };
-  const [selectedFilter, setSelectedFilter] = useState('All'); // начально выбран фильтр "All"
 
+  
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
   };
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(e.target.value);
+  };
+
+  const handleClickStart = async ( title: string) => {
+    store.setCourse(title);
   };
   return (
     
@@ -73,42 +98,43 @@ const CoursesList: FunctionComponent = () => {
         <h1 className="my-courses">My Courses</h1>
       </div>
       <div className="courses-list-container">
-      { data
-      .filter(item => selectedFilter === 'All' ? true : item.Difficulty === selectedFilter)
-      .filter(item => selectedCategory === "All" ? true : item.Category === selectedCategory)
-      .filter((item) => {
-          return search.toLowerCase() === '' ? item : item.Title.toLowerCase().includes(search.toLowerCase());
-        }).slice(0, visibleCourses).map((item) => (
-          <div className="Course-card" key={item.id}>
-          <div className="Course-title-wrapper">
-            <div className="Course-title-label">
-              {item.Title}
-            </div>
-          </div>
-          <div className="Description-wrapper">
-            <div className="Description-label">
-              {item.Description}
-            </div>
-          </div>
-          <div className="Author-info-wrapper">
-            <img
-              className="Person-icon"
-              loading="lazy"
-              alt=""
-              src="/person-fill1-wght400-grad0-opsz24-11.svg"
-            />
-            <div className="Author-name-container">
-              <div className="Author-label">
-                {item.Author}
+        
+        {course
+          .filter(item => selectedFilter === 'All' ? true : item.difficulty === selectedFilter)
+          .filter(item => selectedCategory === "All" ? true : item.category === selectedCategory)
+          .filter((item) => {
+            return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search.toLowerCase());
+          }).slice(0, visibleCourses).map((item) => (
+            <div className="Course-card" key={item.title}>
+              <div className="Course-title-wrapper">
+                <div className="Course-title-label">
+                  {item.title}
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="Difficulty-Category">
+              <div className="Description-wrapper">
+                <div className="Description-label">
+                  {item.description}
+                </div>
+              </div>
+              <div className="Author-info-wrapper">
+                <img
+                  className="Person-icon"
+                  loading="lazy"
+                  alt=""
+                  src="/person-fill1-wght400-grad0-opsz24-11.svg"
+                />
+                <div className="Author-name-container">
+                  <div className="Author-label">
+                    {item.author}
+                  </div>
+                </div>
+              </div>
+              <div className="Difficulty-Category">
                 <div className="Difficulty-wrapper">
                   <div className="Difficulty-label">Difficulty:</div>
-                  <div className={`${item.Difficulty}-color-difficult`}>
-                    <div className={`${item.Difficulty}-label`}>
-                      {item.Difficulty}
+                  <div className={`${item.difficulty}-color-difficult`}>
+                    <div className={`${item.difficulty}-label`}>
+                      {item.difficulty}
                     </div>
                   </div>
                 </div>
@@ -116,24 +142,38 @@ const CoursesList: FunctionComponent = () => {
                   <div className="Category-label">Category:</div>
                   <div className="Category-color">
                     <div className="Category-block">
-                      {item.Category}
+                      {item.category}
                     </div>
                   </div>
                 </div>
               </div>
-          <div className="continue-remove-container">
-            <button className="continue-button-container">
-              <div className="continue-label">continue</div>
-            </button>
-            <button className="start-course-button-container">
-                <div className="start-course-label">Start Course</div>
-            </button>
-          </div>
-        </div>
-        ))}
+              <div className="continue-remove-container">
+                {user?.Course && user.Course.length > 0&& user?.Course.includes(item.title) ?  (
+                  <>
+                    <button className="continue-button-container">
+                      <div className="continue-label">Continue</div>
+                    </button>
+                    <button className="remove-button-container">
+                      <div className="remove-label">Remove</div>
+                    </button>
+                  </>
+                ):(
+                  <>
+                  <button className="start-course-button-container" onClick={() => handleClickStart( item.title) }>
+                    <div className="start-course-label">Start</div>
+                  </button>
+                  <div>
+                    <div></div>
+                  </div>
+                  </>
+                ) }
+              </div>
+
+            </div>
+          ))}
       </div>
       <div className="showmore-container">
-      {visibleCourses < data.length && ( // показываем кнопку "Show more" только если есть еще курсы для показа
+      {visibleCourses < course.length && ( // показываем кнопку "Show more" только если есть еще курсы для показа
           <button className="show-more-button-course" onClick={showMoreCourses}>
             <div className="show-more-text-course">Show more</div>
           </button>
@@ -144,4 +184,4 @@ const CoursesList: FunctionComponent = () => {
   );
 };
 
-export default CoursesList;
+export default (CoursesList);

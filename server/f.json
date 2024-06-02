@@ -1,0 +1,25 @@
+{
+    "title": "Introduction-to-Cybersecurity",
+    "difficulty": "medium",
+    "author": "CyberSkills",
+    "category": "Cryptography",
+    "description": "This course provides an introduction to cybersecurity concepts.",
+    "sections": [
+      {
+        "title": "Introduction",
+        "theoreticalpart": 
+        [
+            {
+                "theoreticaldescription": "aboba"
+            }
+        ],
+        "tasks": [
+          {
+            "taskdescription": "Set up a basic firewall on your computer.",
+            "hint": "Use firewall software like Windows Firewall."
+          }
+        ]
+      }
+    ]
+  }
+  

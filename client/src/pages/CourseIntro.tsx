@@ -2,36 +2,35 @@ import { FunctionComponent } from "react";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import FooterContainer from "../components/FooterContainer";
-import "./CourseIntroPentest.css";
+import "./CourseIntro.css";
 
 const CourseIntroPentest: FunctionComponent = () => {
+  const easy = "easy"
   return (
     <div className="course-intro">
       <NavBar />
       <section className="courseinformationcontainer">
       <div className="coursetitle">
-        <h1 className="coursetitleheading">Pentesting fundamentals</h1>
+        <h1 className="coursetitleheading">{/* Здеся тайтл*/}</h1>
       </div>
-      <div className="coursetagscontainer">
-        <div className="difficultycontainer">
-          <div className="difficulty">Difficulty:</div>
-          <div className="difficultytype-easy">
-            <div className="difficultytypetext">Easy</div>
+      <div className="course-page-tags-container">
+          <div className="difficulty-container">
+            <div className="difficulty-course-page">Difficulty:</div>
+            <div className={`${easy}-color-difficult`}>
+              <div className="type-value">{/* Здеся сложность*/}</div>
+            </div>
           </div>
-          {/* <div className="difficultytype-medium">
-            <div className="difficultytypetext">Medium</div>
+          <div className="category-container">
+            <div className="category">Category:</div>
+            <div className="category-type">
+              <div className="categorytypetext">{/*Здеся категориa*/}</div>
+            </div>
           </div>
-          <div className="difficultytype-hard">
-            <div className="difficultytypetext">Hard</div>
-          </div> */}
+          <div className="author-container">
+            <div className="author">Author:</div>
+            <div className="cyberskills">{/* ЗДеся автор */}</div>
+          </div>
         </div>
-        <div className="categorycontainer">
-          <div className="category">Category:</div>
-          <div className="categorytype">
-            <div className="type-name">Pentesting</div>
-          </div>
-        </div>
-      </div>
       <div className="coursedescriptioncontainer">
         <p className="coursedescriptiontext">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris felis, vehicula eu dapibus et, tristique vel nisl. Duis venenatis sapien eget turpis laoreet placerat.

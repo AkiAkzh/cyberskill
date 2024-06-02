@@ -321,3 +321,42 @@ ul {
 }
 
 
+.author,
+.cyberskills {
+  position: relative;
+  display: inline-block;
+  min-width: 68px;
+}
+.cyberskills {
+  align-self: stretch;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: Roboto;
+  min-width: 102px;
+}
+
+.Hard-color-difficult{
+  border-radius: 5px;
+  background-color: rgba(255, 62, 62, 0.18);
+  justify-content: center;
+  padding: 3px 5.5px;
+  color: #ff3e3e;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.Medium-color-difficult{
+
+  border-radius: 5px;
+  background-color: rgba(255, 175, 0, 0.18);
+  justify-content: center;
+  padding: 3px;
+  color: #ffaf00;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
