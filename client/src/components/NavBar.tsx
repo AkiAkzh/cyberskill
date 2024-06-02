@@ -33,11 +33,7 @@ const NavBar: FunctionComponent = () => {
   
   const t = translations[language];
   
-  useEffect( ()=>{
-    if(localStorage.getItem('token')){
-      store.checkAuth()
-    }
-  },[])
+  
 
   if( !store.isAuth ){
     return (

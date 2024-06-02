@@ -4,6 +4,7 @@ const router = new Router();
 const userController = require('../controllers/user-controller');
 const authMiddleware = require('../middlewares/auth-middleware');
 const courseController = require('../controllers/course-controller');
+const courseService = require('../service/course-service');
 
 
 
@@ -17,8 +18,12 @@ router.post('/logout', userController.logout);
 router.get('/activate/:link', userController.activate);
 router.get('/refresh', userController.resresh);
 router.get('/users', authMiddleware, userController.getUsers);
-router.post('/user/update', userController.update);
-router.get('/profile', userController.profileUser)
-router.post('/submit', authMiddleware ,courseController.userAnswer)
+router.get('/profile', userController.profileUser);
+router.post('/submit', authMiddleware ,courseController.userAnswer);
+
+router.get('/info', courseController.getInfo);
+router.get('/courses', courseController.getCourses);
+router.post('/course/create', courseController.createCourse)
+router.get('/course/:title',  courseController.getCourse)
 
 module.exports = router

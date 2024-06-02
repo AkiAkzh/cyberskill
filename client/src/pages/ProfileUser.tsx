@@ -1,10 +1,9 @@
 import { FunctionComponent } from "react";
 import NavBar from "../components/NavBar";
 import ProfileContainer from "../components/ProfileContainer";
-import MyCoursesBlock from "../components/MyCoursesBlock";
-// import Homes from "../components/Homes";
 import FooterContainer from "../components/FooterContainer";
 import "./ProfileUser.css";
+import CoursesList from "../components/CoursesList";
 
 const ProfileUser: FunctionComponent = () => {
   return (
@@ -13,8 +12,7 @@ const ProfileUser: FunctionComponent = () => {
       <ProfileContainer />
       <section className="course-list">
         <div className="courses">
-        <MyCoursesBlock />
-          {/* <Homes /> */}
+        <CoursesList />
         </div>
       </section>
       <FooterContainer />

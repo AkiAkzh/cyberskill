@@ -1,20 +1,17 @@
-import { FunctionComponent, useContext, useState } from "react";
+import { FunctionComponent, useContext, useEffect, useState } from "react";
 import "./ProfileContainer.css";
 import { Context } from "..";
-import UserService from "../services/UserServies";
-import { IUser } from "../models/IUser";
 
 const FrameComponent: FunctionComponent = () => {
   const {store} = useContext(Context);
   const [email, setEmail] = useState<string>('');
   const [password, serPassword] = useState<string>('');
-  async function getpro(){
-    const response = await UserService.profileUser()
-    setEmail(response.data.email) 
-   }
-  getpro()
   
-  console.log(email)
+  useEffect( ()=>{
+    if(store.isAuth){
+    setEmail(store.user.email);
+    }
+  },[])
   return (
      <section className="profile-container-wrapper">
       <div className="profile-container">

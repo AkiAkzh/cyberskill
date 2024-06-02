@@ -6,6 +6,7 @@ import { AuthResponse } from "../models/response/AuthResponse";
 import { API_URL } from "../http";
 import UserService from "../services/UserServies";
 import CourseService from "../services/CourseServies";
+import { redirect } from "react-router-dom";
 
 
 
@@ -13,7 +14,7 @@ export default class Store{
     user = {} as IUser;
     isAuth = false;
     isLoading = false;
-
+    course_title: string | undefined;
     constructor(){
         makeAutoObservable(this);
     }
@@ -29,6 +30,9 @@ export default class Store{
         this.isLoading = bool;
     }
 
+    setCourse(String : string){
+        this.course_title = String;
+    }
     async login(email :  string, password : string){
         try {
             const response = await AuthService.login(email, password);
@@ -97,6 +101,23 @@ export default class Store{
             
         } catch (e) {
             console.log(e)
+        }
+    }
+    async getCourse(courseTitle:string){
+        try {
+            const response = await CourseService.getCourseInfo(courseTitle);
+            return response;
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    
+    async getAllCourses(){
+        try {
+            const response = await CourseService.getAllCourses();
+            return response;
+        } catch (e) {
+            console.log(e);
         }
     }
 }

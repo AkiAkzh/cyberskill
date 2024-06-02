@@ -1,9 +1,9 @@
 import React,{ FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-import MyCoursesBlock from "../components/MyCoursesBlock";
 import NavBar from "../components/NavBar";
 import "./Dashboard.css";
 import FooterContainer from "../components/FooterContainer";
+import CoursesList from "../components/CoursesList";
 
 const Dashboard: FunctionComponent = () => {
   return (
@@ -39,9 +39,8 @@ const Dashboard: FunctionComponent = () => {
         </section>
         </main>
       </section>
-        <MyCoursesBlock />
-        <FooterContainer/>
-        {/* <MyCoursesBlock /> */}
+      {/* <CoursesList/> */}
+      <FooterContainer/>
     </div>
   );
 };

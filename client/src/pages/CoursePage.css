@@ -191,17 +191,34 @@
 }
 
 .blank-line,
-.course-section-paragraph {
+.course-section-paragraph {/*1217px;*/
   margin: 0;
-  width: 1217px;
+  width: 100%;
   font-size: 17px;
   position: relative;
   line-height: 160%;
   display: inline-block;
   max-height: fit-content;
   word-break: break-word;
+  /* border: 1px solid #ccc; Граница для наглядности */
+  padding: 10px;
+  text-align: justify; /* Выравнивание текста по ширине */
 }
-
+.code-block-container {
+  display: flex;
+  justify-content: center;
+}
+.code-block {
+  color: #7cafd8;
+  width: 917px;
+  background-color: #141d2c;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  overflow-x: auto; /* Для горизонтальной прокрутки, если код длинный */
+}
 .highlights {
   background-color: #fff;
   color: #141d2c;
@@ -264,7 +281,13 @@ b {
   position: relative;
   object-fit: cover;
 }
-
+.image-bii{
+  
+  width: 30%;
+  height: 30%;
+  position: relative;
+  object-fit: cover;
+}
 .image-big {
   width: 80%;
   height: 80%;
