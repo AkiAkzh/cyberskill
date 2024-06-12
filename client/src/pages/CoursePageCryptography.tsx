@@ -17,36 +17,36 @@ const HintPopup: FunctionComponent<{ hint: string, onClose: () => void }> = ({ h
 );
 const translations = {
   EN: {
-    answer0: "pentest",
+    answer0: "eadgtumknnu",
     answer1: "vulnerabilities",
     answer2: "external",
     answer3: "internal",
     answer4: "social",
     answer10: "active",
     answer11: "passive",
-    placeholder: "Answer",
+    CodePlaceholder: "Your function",
     incorrect: "Oops.. The answer is incorrect"
   },
   KZ: {
-    answer0: "пентест",
+    answer0: "eadgtumknnu",
     answer1: "осалдықтар",
     answer2: "сыртқы",
     answer3: "ішкі",
     answer4: "әлеуметтік",
     answer10: "белсенді",
     answer11: "пассивті",
-    placeholder: "Жауап",
+    CodePlaceholder: "Сіздің функцияңыз",
     incorrect: "Жауап дұрыс емес"
   },
   RU: {
-    answer0: "пентест",
+    answer0: "eadgtumknnu",
     answer1: "уязвимости",
     answer2: "внешний",
     answer3: "внутренний",
     answer4: "социальный",
     answer10: "активный",
     answer11: "пассивный",
-    placeholder: "Ответ",
+    CodePlaceholder: "Ваша функция",
     incorrect: "Ой.. Ответ неверен"
   },
 }
@@ -59,7 +59,6 @@ const CoursePageCryptography: FunctionComponent = () => {
   const [Prolanguage, setProLanguage] = useState('python');
   const {store} = useContext(Context);
 
-  // store.getCourse()
   const initialAnswerState = { isCorrect: false, isSubmitted: false };
   const [userAnswers, setUserAnswers] = useState(["", ""]);
   const [answerStates, setAnswerStates] = useState(Array(120).fill(initialAnswerState));
@@ -74,7 +73,7 @@ const CoursePageCryptography: FunctionComponent = () => {
   const studentHashFlag3 = SHA256(studentEmail + "_pentest3").toString();
   const studentHashFlag4 = SHA256(studentEmail + "_pentest4").toString();
 
-  const correctAnswers = [t.answer0, t.answer1, t.answer2, t.answer3, t.answer4, "nmap", "burp suite", "-sn", "-a", "-ss", t.answer10, t.answer11, "2016-06-19", "support@gohost.kz", "80", studentHashFlag1, studentHashFlag2, studentHashFlag3, studentHashFlag4]; // массивых ответов на Задания
+  const correctAnswers = [t.answer0, t.answer1, t.answer2, t.answer3, t.answer4]; // массивых ответов на Задания
 // Функция для обработки изменений в ответах пользователя
 const handleAnswerChange = (index: number, value: string) => {
   setUserAnswers(prevState => {
@@ -171,7 +170,7 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
     <div className="course-page">
       <NavBar />
       <div className="course-page-information-container">
-        <h1 className="course-page-title">Network Security fundamentals</h1>
+        <h1 className="course-page-title">Introduction to Cryptography</h1>
         <div className="course-page-tags-container">
           <div className="difficulty-container">
             <div className="difficulty-course-page">Difficulty:</div>
@@ -182,7 +181,7 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
           <div className="category-container">
             <div className="category">Category:</div>
             <div className="category-type">
-              <div className="categorytypetext">Network Security</div>
+              <div className="categorytypetext"> Cryptography</div>
             </div>
           </div>
           <div className="author-container">
@@ -191,8 +190,7 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
           </div>
         </div>
         <div className="course-page-description">
-          Start learning Network Security fundamentals to master your
-          information security skills.
+        Fundamental knowledge of cryptography
         </div>
       </div>
       {/* Course sections Container */}
@@ -290,17 +288,22 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
               <div className="question-box-container">
                 <div className="question-text">
                 <h4>Шифрование и дешифрование с использованием симметричного алгоритма:</h4>
-                Создайте функцию для шифрования текста с использованием шифра Цезаря. 
+                Напишите функцию для шифрования текста с использованием шифра Цезаря. 
                 Зашифруйте слово "CyberSkills" с сдвигом 2. Затем расшифруйте его.<br/>
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area" 
-                      value={code}
-                      onChange={ (e) => setCode(e.target.value)}
-                      placeholder="Write code"
+                      value={userAnswers[0]}
+                      onChange={ (e) => handleAnswerChange(0, e.target.value)}
+                      disabled = {isDisabled(0)}
+                      placeholder= {`${t.CodePlaceholder}`}
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(0)}
+                    disabled={isDisabled(0)}
+                    style={getButtonStyle(0)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(0)}>{getButtonText(0)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -322,12 +325,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                   <form className="anser-box-container" onSubmit={handleSubmit}>
                     <textarea className="answer-box-input-field-area" 
-                        value={code}
-                        onChange={ (e) => setCode(e.target.value)}
-                        placeholder="Write code"
+                        value={userAnswers[1]}
+                        onChange={ (e) => handleAnswerChange(1,e.target.value)}
+                        disabled = {isDisabled(1)}
+                        placeholder= {`${t.CodePlaceholder}`}
                     />
-                    <button className="submit-button" >
-                      <div className="submit-button-text">Submit</div>
+                    <button className="submit-button" 
+                    onClick={() => handleSubmits(1)}
+                    disabled={isDisabled(1)}
+                    style={getButtonStyle(1)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(1)}
+                      >{getButtonText(1)}</div>
                     </button>
                     <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                       <div className="hint-button-text" >Hint</div>
@@ -387,12 +396,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br />
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
-                    placeholder="Write code"
+                    value={userAnswers[2]}
+                    onChange={ (e) => handleAnswerChange(2, e.target.value)}
+                    disabled = {isDisabled(2)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(2)}
+                    disabled={isDisabled(2)}
+                    style={getButtonStyle(2)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(2)}>{getButtonText(2)}</div>
                   </button>
                   <select value={Prolanguage}
                     onChange={(e) => setProLanguage(e.target.value as 'python' || 'java' || 'cpp')}>
@@ -476,12 +491,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
-                    placeholder="Write code"
+                    value={userAnswers[3]}
+                    onChange={ (e) => handleAnswerChange(3, e.target.value)}
+                    disabled = {isDisabled(3)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(3)}
+                    disabled={isDisabled(3)}
+                    style={getButtonStyle(3)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(3)}>{getButtonText(3)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -501,12 +522,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
-                    placeholder="Write code"
+                    value={userAnswers[4]}
+                    onChange={ (e) => handleAnswerChange(4, e.target.value)}
+                    disabled = {isDisabled(4)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(4)}
+                    disabled={isDisabled(4)}
+                    style={getButtonStyle(4)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(4)}>{getButtonText(4)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -567,11 +594,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
+                    value={userAnswers[5]}
+                    onChange={ (e) => handleAnswerChange(5, e.target.value)}
+                    disabled = {isDisabled(5)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(5)}
+                    disabled={isDisabled(5)}
+                    style={getButtonStyle(5)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(5)}>{getButtonText(5)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -594,12 +628,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
-                    placeholder="Write code"
+                    value={userAnswers[6]}
+                    onChange={ (e) => handleAnswerChange(6, e.target.value)}
+                    disabled = {isDisabled(6)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(6)}
+                    disabled={isDisabled(6)}
+                    style={getButtonStyle(6)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(6)}>{getButtonText(6)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -661,12 +701,18 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <form className="anser-box-container" onSubmit={handleSubmit}>
                   <textarea className="answer-box-input-field-area"
-                    value={code}
-                    onChange={(e) => setCode(e.target.value)}
-                    placeholder="Write code"
+                    value={userAnswers[7]}
+                    onChange={ (e) => handleAnswerChange(7, e.target.value)}
+                    disabled = {isDisabled(7)}
+                    placeholder= {`${t.CodePlaceholder}`}
+                    
                   />
-                  <button className="submit-button" >
-                    <div className="submit-button-text">Submit</div>
+                  <button className="submit-button" 
+                    onClick={() => handleSubmits(7)}
+                    disabled={isDisabled(7)}
+                    style={getButtonStyle(7)}>
+                      <div className="submit-button-text"
+                      style={getButtonStyle(7)}>{getButtonText(7)}</div>
                   </button>
                   <button className="hint-button" onClick={() => showHint("Hint: Use the ASCII values of characters.")}>
                     <div className="hint-button-text" >Hint</div>
@@ -688,20 +734,20 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
                 </div><br/>
                 <div className="anser-box-container">
                   <input className="answer-box-input-field"
-                    placeholder={`${t.placeholder}`}
+                    placeholder={`${t.CodePlaceholder}`}
                     type="text"
-                    value={userAnswers[0]}
-                    onChange={(e) => handleAnswerChange(0, e.target.value)}
-                    disabled={isDisabled(0)}
+                    value={userAnswers[8]}
+                    onChange={(e) => handleAnswerChange(8, e.target.value)}
+                    disabled={isDisabled(8)}
                   />
                   <button className="submit-button"
-                    onClick={() => handleSubmits(0)}
-                    disabled={isDisabled(0)}
-                    style={getButtonStyle(0)}
+                    onClick={() => handleSubmits(8)}
+                    disabled={isDisabled(8)}
+                    style={getButtonStyle(8)}
                   >
                     <div className="submit-button-text"
-                      style={getButtonStyle(0)}
-                    >{getButtonText(0)}</div>
+                      style={getButtonStyle(8)}
+                    >{getButtonText(8 )}</div>
                   </button>
                 </div>
               </div>

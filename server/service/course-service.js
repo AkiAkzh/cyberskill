@@ -45,17 +45,15 @@ class CourseService {
         exec(command, { cwd: courseAnswerDir }, (error, stdout, stderr) => {
           // fs.unlinkSync(fileName); // Удалить файл после выполнения
           if (language === 'cpp') {
-            fs.unlinkSync(path.join(courseAnswerDir, 'main')); // Удалить исполняемый файл для C++
+            fs.unlinkSync(path.join(courseAnswerDir, 'main')); 
           }
 
 
-          // Запись stderr в лог файл
           if (error || stderr) {
             const errorMessage = error ? `Error: ${error.message}\n` : '';
             fs.writeFileSync(errorLogFile, `${errorMessage}${stderr || 'Unknown error'}`);
           }
 
-          // Если произошла ошибка, возвращаем stderr, иначе возвращаем stdout
           if (error) {
             reject(stderr || 'Execution error');
           } else {

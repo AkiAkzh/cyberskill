@@ -160,7 +160,7 @@ const CoursesList: FunctionComponent = () => {
                 ):(
                   <>
                   <button className="start-course-button-container" onClick={() => handleClickStart( item.title) }>
-                    <div className="start-course-label">Start</div>
+                    <a className="start-course-label" href={`/courses/${item.title}`} >Start</a>
                   </button>
                   <div>
                     <div></div>

@@ -41,8 +41,8 @@ function App() {
         <Route path="/course/info" element={<CourseIntroPentest />} />
         <Route path="/profile" element={<ProfileUser />}  />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/course/pentest" element={<CoursePagePentest />} />
-        <Route path="/course/cryptography" element={<CoursePageCryptography />} />
+        <Route path="/courses/Pentesting Fundamentals" element={<CoursePagePentest />} />
+        <Route path="/courses/Introduction-of-Cryptography" element={<CoursePageCryptography />} />
       </Routes>
     </LanguageProvider>
   );
