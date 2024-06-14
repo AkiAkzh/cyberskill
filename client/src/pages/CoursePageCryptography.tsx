@@ -252,11 +252,7 @@ const CoursePageCryptography: FunctionComponent = () => {
   const { language, setLanguage } = useLanguage(); // Использование кастомного хука для управления языком
   const t = translations[language]; // Получение переводов на основе выбранного языка
 
-  const studentEmail = "actual_user" // e-mail юзера
-  const studentHashFlag1 = SHA256(studentEmail + "_pentest1").toString(); // зашифрованный flag юзера
-  const studentHashFlag2 = SHA256(studentEmail + "_pentest2").toString();
-  const studentHashFlag3 = SHA256(studentEmail + "_pentest3").toString();
-  const studentHashFlag4 = SHA256(studentEmail + "_pentest4").toString();
+  
 
   const correctAnswers = [t.answer0]; // массивых ответов на Задания
 // Функция для обработки изменений в ответах пользователя

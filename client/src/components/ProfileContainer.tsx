@@ -4,7 +4,7 @@ import { Context } from "..";
 
 const FrameComponent: FunctionComponent = () => {
   const {store} = useContext(Context);
-  const [email, setEmail] = useState<string>('');
+  const [email, setEmail] = useState<string>();
   const [password, serPassword] = useState<string>('');
   
   useEffect( ()=>{
