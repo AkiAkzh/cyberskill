@@ -1,25 +1,13 @@
-import requests
-
-# IP-адрес телевизора
-tv_ip = '192.168.1.56:80'
-
-# URL для отправки PIN-кода (предположительно)
-url = f'http://{tv_ip}/api/verify_pin'
-
-# Список PIN-кодов для перебора (в данном примере 4-значные коды от 0000 до 9999)
-pin_codes = [f'{i:04}' for i in range(10000)]
-
-# Функция для отправки PIN-кода
-def send_pin(pin):
-    payload = {'pin': pin}
-    response = requests.post(url, data=payload)
-    return response
-
-# Перебор PIN-кодов
-for pin in pin_codes:
-    response = send_pin(pin)
-    if 'success' in response.text:  # Проверка успешного ответа (проверьте, что телевизор возвращает при успешном входе)
-        print(f'PIN-код найден: {pin}')
-        break
-    else:
-        print(f'PIN-код {pin} неверен')
+def caesar_cipher_encrypt(text, shift):
+        encrypted_text = ""
+        for char in text:
+            if char.isalpha():
+                shift_base = 65 if char.isupper() else 97
+                encrypted_text += chr((ord(char) - shift_base + shift) % 26 + shift_base)
+            else:
+                encrypted_text += char
+        return encrypted_text
+message = "cyberskills"
+shift = 2
+encrypted_message = caesar_cipher_encrypt(message, shift)
+print(f"encrypted message: {encrypted_message}")

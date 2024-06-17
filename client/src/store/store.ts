@@ -93,11 +93,11 @@ export default class Store{
         }
     }
 
-    async answerSumbit(code : string, Prolanguage: string){
+    async answerSumbit(code : string, Prolanguage: string, correctAnswers: string){
         try {
-            const response = await CourseService.submitAnswer(code,Prolanguage);
-            console.log(response)
-            
+            const response = await CourseService.submitAnswer(code,Prolanguage, correctAnswers);
+            // console.log(response.data.serverAnwser)
+            return response.data.serverAnwser;
             
         } catch (e) {
             console.log(e)

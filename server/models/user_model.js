@@ -8,7 +8,8 @@ const UserSchema = new Schema({
     loginAttempts: {type: Number, required: true, default:0},
     lockUntil: { type: Number },
     activationLink: {type: String},
-    completedTask: {type:Number, default:0}
+    completedTask: {type:Number, default:0},
+    university : {type:String, default:"Astana IT"}
     // Courses: [{title : {type: String, ref: 'Course'}}]
 })
 UserSchema.virtual('isLocked').get(function() {

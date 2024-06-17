@@ -25,7 +25,7 @@ class CourseService {
             errorLogFile = path.join(courseAnswerDir, 'java_error.log');
             const javaCode = ` ${code}`;
             fs.writeFileSync(fileName, javaCode);
-            command = `javac ${filename}`;
+            command = `javac ${fileName}`;
             break;
           case 'cpp':
             fileName = path.join(courseAnswerDir, 'main.cpp');

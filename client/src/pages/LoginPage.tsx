@@ -16,7 +16,7 @@ const LoginPage: FunctionComponent = () => {
 
         try {
             store.login(email, password);
-            
+
         } catch (err) {
             if (axios.isAxiosError(err) && err.response) {
               setError(err.response.data.message);
@@ -74,10 +74,9 @@ const LoginPage: FunctionComponent = () => {
             <div className="dont-have-an-container">
               <span>
                 <span>Don’t have an account yet?</span>
-                <span className="span">{`Sign up`}</span>
               </span>
               <span className="sign-up">
-            <Link to="/signup"><span>Sign up</span></Link>
+                <Link to="/signup"><span className="sign-up"> Sign up</span></Link>
               </span>
             </div>
           </div>

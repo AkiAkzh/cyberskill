@@ -2,25 +2,33 @@ const { NodeVM } = require("vm2");
 const ApiError = require("../exceptions/api-error");
 const courseService = require("../service/course-service");
 const Course = require("../models/courseDB/course_model");
+const { ServerApiVersion } = require("mongodb");
 
 
 class CourseController{
     async userAnswer(req, res, next){
         try {
-            const { code, Prolanguage } = req.body;
+            const { code, Prolanguage, correctAnswers } = req.body;
 
             if( !code ){
-                return next(ApiError.BadRequest("Кода нет", errors.array()));
+                return next(ApiError.BadRequest("Кода нет"));
             }
             
             try {
                 const result = await courseService.executeCode(code, Prolanguage);
-                res.send({ result });
+                // res.send({ result });
                 console.log(result)
+                const searchTerm = correctAnswers;
+                const words = result.split(' ');
+                const serverAnwser = words.some(word => word.includes(searchTerm));
+
+                if(serverAnwser){
+                    console.log(serverAnwser);
+                    return res.json({serverAnwser});
+                }
             } catch (error) {
                 next({ error: error.toString() });
             }
-            console.log(code);
 
 
         } catch (e) {

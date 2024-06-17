@@ -49,7 +49,6 @@ const NavBar: FunctionComponent = () => {
             <LanguageSelection />
               <div></div>
               <Link to="/courses"className="links-nav">{t.courses}</Link>
-              <Link to="/about-us"className="links-nav">{t.about_us}</Link>
               <Link className="SignUpButtom" to="/login">
                 <div className="SignUp-label">{t.sign_up_button}</div>
               </Link>
@@ -73,7 +72,6 @@ const NavBar: FunctionComponent = () => {
             <LanguageSelection />
               <Link to="/dashboard"className="links-nav">{t.dashboard}</Link>
               <Link to="/courses"className="links-nav">{t.courses}</Link>
-              <Link to="/about-us"className="links-nav">{t.about_us}</Link>
               <Link className="SignUpButtom" to="/profile">
                 <div className="SignUp-label">Profile</div>
               </Link>

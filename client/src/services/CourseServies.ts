@@ -2,11 +2,12 @@ import { AxiosResponse } from "axios";
 import $api from "../http";
 import { IUser } from "../models/IUser";
 import { CourseInfo } from "../models/CourseInfo";
+import { anwser } from "../models/anwser";
 
 
 export default class CourseService{
-   static async submitAnswer(code: string,Prolanguage: string):Promise<AxiosResponse<IUser>>{
-       return $api.post('/submit', {code,Prolanguage})
+   static async submitAnswer(code: string,Prolanguage: string, correctAnswers: string):Promise<AxiosResponse<anwser>>{
+       return $api.post<anwser>('/submit', {code,Prolanguage, correctAnswers})
    }
    static async getCourseInfo(courseTitle:string):Promise<AxiosResponse<CourseInfo>>{
         return $api.get(`/courses/${courseTitle}`);

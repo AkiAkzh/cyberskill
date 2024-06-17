@@ -1,13 +1,20 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useContext, useEffect, useState } from "react";
 import "./UsersSearch.css";
 import { data_users } from "../data_users"
+import { Context } from "..";
+import CourseService from "../services/CourseServies";
+import UserService from "../services/UserServies";
+import { IUser } from "../models/IUser";
+import { observer } from "mobx-react-lite";
 
 const UsersSearch: FunctionComponent = () => {
   const [search, setSearch] = useState('')
   const [visibleUsers, setVisibleUsers] = useState(7); // начальное количество видимых пользователей
   const [selectedRole, setSelectedRole] = useState('All'); // начально выбран фильтр "All" для роли
   const [selectedUniversity, setSelectedUniversity] = useState('All'); // начально выбран фильтр "All" для университета
-
+  const {store} = useContext(Context);
+  const [user, setUser] = useState('');
+  const [users, setUsers] = useState<IUser[]>([]);;
   const showMoreUsers = () => {
     setVisibleUsers(visibleUsers + 7); // увеличиваем количество видимых пользователей на 7
   };
@@ -18,6 +25,19 @@ const UsersSearch: FunctionComponent = () => {
   const handleUniversityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedUniversity(e.target.value);
   };
+
+  useEffect( ()=>{
+    if(store.isAuth){
+    setUser(store.user.email);
+    }
+    
+    async function fetchData() {
+      const response = await UserService.fetchUsers();
+      setUsers(response.data);
+    }
+    fetchData();
+  },[])
+
   return (
     <div className="user-search-main">
       <div className="search-container">
@@ -60,7 +80,7 @@ const UsersSearch: FunctionComponent = () => {
         </div>
       </div>
       <div className="admin-search-table">
-        {data_users
+        {users
           .filter(item => selectedRole === "All" ? true : item.role === selectedRole)
           .filter(item => selectedUniversity === "All" ? true : item.university === selectedUniversity)
           .filter((item) => {
@@ -72,12 +92,10 @@ const UsersSearch: FunctionComponent = () => {
               </button>
               <div className="user-email">{item.email}</div>
               <div className="user-role">{item.role}</div>
+              <div className="user-role">Completed tasks: {item.completedTask}</div>
               <div className="user-university">{item.university}</div>
               <button className="reset-password-button">
                 <div className="reset-password-button-text">Reset password</div>
-              </button>
-              <button className="view-profile-button">
-                <div className="view-profile-button-text ">View</div>
               </button>
               <button className="delete-user-button">
                 <div className="delete-user-button-text">Delete</div>
@@ -87,7 +105,7 @@ const UsersSearch: FunctionComponent = () => {
 
       </div>
       <div className="show-more-button-wrapper">
-        {visibleUsers < data_users.length && ( // показываем кнопку "Show more" только если есть еще пользователи для показа
+        {visibleUsers <= data_users.length && ( // показываем кнопку "Show more" только если есть еще пользователи для показа
           <button className="show-more-button-course" onClick={showMoreUsers}>
             <div className="show-more-text-course">Show more</div>
           </button>
@@ -97,5 +115,5 @@ const UsersSearch: FunctionComponent = () => {
   );
 };
 
-export default UsersSearch;
+export default observer(UsersSearch);
 

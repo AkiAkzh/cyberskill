@@ -31,7 +31,7 @@ const translations = {
     question7: "The task is given to encrypt a text message using the AES encryption algorithm with a key length of at least 256 bits. They then have to decrypt the encrypted message they receive using the correct key to verify the integrity of the data.",
     question8: "Students are provided with a set of encrypted messages using various encryption algorithms and key lengths. Using well-known cryptanalysis techniques, they should try to recover the original messages and identify the vulnerabilities of each algorithm.",
 
-    answer0: "pentest",
+    answer0: "eadgtumknnu",
 
     course_page_title: "Introduction to Cryptography",
     difficulty: "Difficulty:",
@@ -105,7 +105,7 @@ const translations = {
     question7: "Ұзындығы кемінде 256 бит кілті бар AES шифрлау алгоритмін пайдаланып мәтіндік хабарламаны шифрлау тапсырмасы берілген. Содан кейін олар деректердің тұтастығын тексеру үшін дұрыс кілтті пайдаланып алынған шифрланған хабарламаның шифрын шешуі керек.",
     question8: "Студенттерге әртүрлі шифрлау алгоритмдері мен кілт ұзындықтарын қолдана отырып, шифрланған хабарламалар жиынтығы ұсынылады. Белгілі криптоанализ әдістерін қолдана отырып, олар бастапқы хабарламаларды қалпына келтіруге және әр алгоритмнің осалдығын анықтауға тырысуы керек.",
 
-    answer0: "пентест",
+    answer0: "eadgtumknnu",
 
     course_page_title: "Криптографияға кіріспе",
     difficulty: "Күрделілік:",
@@ -176,7 +176,7 @@ const translations = {
     question7: "Дано задание зашифровать текстовое сообщение с использованием алгоритма шифрования AES с ключом длиной не менее 256 бит. Затем они должны расшифровать полученное зашифрованное сообщение, используя правильный ключ, чтобы проверить целостность данных.",
     question8: "Студентам предоставляется набор зашифрованных сообщений с использованием различных алгоритмов шифрования и длин ключей. Используя известные методы криптоанализа, они должны попытаться восстановить исходные сообщения и определить уязвимости каждого алгоритма.",
 
-    answer0: "пентест",
+    answer0: "eadgtumknnu",
 
     course_page_title: "Введение в Криптографию",
     difficulty: "Сложность:",
@@ -265,17 +265,23 @@ const handleAnswerChange = (index: number, value: string) => {
 };
 
 // Функция для обработки отправки ответа
-const handleSubmits = (index: number) => {
-  const isCorrect = userAnswers[index] === correctAnswers[index];
+const handleSubmits = async (index: number) => {
+  const isCorrect = await store.answerSumbit(userAnswers[index], Prolanguage, correctAnswers[index]);
+  console.log(isCorrect);
   const updatedAnswerStates = [...answerStates];
   updatedAnswerStates[index] = { isCorrect, isSubmitted: true };
   setAnswerStates(updatedAnswerStates);
-
-  // Показывает ошибку на 3 сек, если ответ не правильный
+  if(isCorrect){
+    console.log(store.user.email);
+    const email = store.user.email;
+    store.updatedprogess(email);
+  }
+    // Показывает ошибку на 3 сек, если ответ не правильный
   if (!isCorrect) {
     setAlertVisible(true);
     setTimeout(() => setAlertVisible(false), 3000);
   }
+  
 };
 // Смена стиля кнопки в завимиости от правильности ответа
 const getButtonStyle = (index: number) => {
@@ -320,7 +326,6 @@ const getButtonText = (index: number) => answerStates[index].isSubmitted && answ
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
-    store.answerSumbit(code, Prolanguage)
 
   };
 

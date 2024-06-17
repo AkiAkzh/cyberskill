@@ -28,17 +28,7 @@ const FooterContainer: FunctionComponent = () => {
   const t = translations[language];
   return (
     <footer className="footer4">
-      <div className="footercontainer4">
-        <b className="logo14">CyberSkills</b>
-        <div className="fotterlinks4">
-          <div className="dashboard16">{t.dashboard}</div>
-          <div className="courses17">{t.courses}</div>
-          <div className="about-us14">{t.about_us}</div>
-        </div>
-        <button className="accountbutton3">
-          <div className="account3">{t.account}</div>
-        </button>
-      </div>
+      
       <div className="emails4">
         <div className="vector-parent4">
           <img

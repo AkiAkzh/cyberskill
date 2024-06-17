@@ -1,0 +1,10 @@
+Error: Command failed: python3 C:\Users\User\Desktop\FOR_DIPLOMA\Cyberskill\server\courseanswer\code.py
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\FOR_DIPLOMA\Cyberskill\server\courseanswer\code.py", line 1, in <module>
+    from crypto.publickey import rsa
+ModuleNotFoundError: No module named 'crypto'
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\FOR_DIPLOMA\Cyberskill\server\courseanswer\code.py", line 1, in <module>
+    from crypto.publickey import rsa
+ModuleNotFoundError: No module named 'crypto'

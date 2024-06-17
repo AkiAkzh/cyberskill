@@ -1,6 +1,7 @@
 import { FunctionComponent, useContext, useEffect, useState } from "react";
 import "./ProfileContainer.css";
 import { Context } from "..";
+import { observer } from "mobx-react-lite";
 
 const FrameComponent: FunctionComponent = () => {
   const {store} = useContext(Context);
@@ -8,10 +9,15 @@ const FrameComponent: FunctionComponent = () => {
   const [password, serPassword] = useState<string>('');
   
   useEffect( ()=>{
-    if(store.isAuth){
-    setEmail(store.user.email);
+    async function userEmail() {
+      const ss = store.user.email;
+      setEmail(ss); 
     }
-  },[])
+    if(store.isAuth){
+      userEmail();
+    }
+  },[store.isAuth])
+  const student = email;
   return (
      <section className="profile-container-wrapper">
       <div className="profile-container">
@@ -28,7 +34,7 @@ const FrameComponent: FunctionComponent = () => {
             />
           </div>
           <div className="profile-email-name-container">
-            <div className="profile-email-name">{email}</div>
+            <div className="profile-email-name">{student}</div>
           </div>
         </div>
         <form className="profile-information-container">
@@ -94,4 +100,4 @@ const FrameComponent: FunctionComponent = () => {
   );
 };
 
-export default FrameComponent;
+export default observer(FrameComponent);
