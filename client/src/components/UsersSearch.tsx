@@ -9,14 +9,14 @@ import { observer } from "mobx-react-lite";
 
 const UsersSearch: FunctionComponent = () => {
   const [search, setSearch] = useState('')
-  const [visibleUsers, setVisibleUsers] = useState(7); // начальное количество видимых пользователей
+  const [visibleUsers, setVisibleUsers] = useState(5); // начальное количество видимых пользователей
   const [selectedRole, setSelectedRole] = useState('All'); // начально выбран фильтр "All" для роли
   const [selectedUniversity, setSelectedUniversity] = useState('All'); // начально выбран фильтр "All" для университета
   const {store} = useContext(Context);
   const [user, setUser] = useState('');
   const [users, setUsers] = useState<IUser[]>([]);;
   const showMoreUsers = () => {
-    setVisibleUsers(visibleUsers + 7); // увеличиваем количество видимых пользователей на 7
+    setVisibleUsers(visibleUsers + 5); // увеличиваем количество видимых пользователей на 7
   };
   const handleRoleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRole(e.target.value);
