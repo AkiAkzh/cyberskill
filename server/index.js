@@ -18,8 +18,8 @@ app.use(cors({
 app.use(helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'"], 
-      styleSrc: ["'self'", 'https://stackpath.bootstrapcdn.com', "'unsafe-inline'"],
+      scriptSrc: ["'self'"], 
+      styleSrc: ["'self'", 'https://stackpath.bootstrapcdn.com' ],
       imgSrc: ["'self'", 'data:'],
       connectSrc: ["'self'", 'https://api.example.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],

@@ -11,4 +11,8 @@ export default class UserService{
    static async profileUser():Promise<AxiosResponse<IUser>>{
         return $api.get<IUser>(`/profile`)
    }
+
+   static async updatedProges(email :String){
+        return $api.post('/updatedprogess', {email});
+   }
 }

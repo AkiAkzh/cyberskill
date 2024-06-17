@@ -120,4 +120,12 @@ export default class Store{
             console.log(e);
         }
     }
+
+    async updatedprogess(email:string){
+        try {
+            await UserService.updatedProges(email);
+        } catch (e) {
+            console.log(e);
+        }
+    }
 }

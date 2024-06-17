@@ -8,7 +8,8 @@ const UserSchema = new Schema({
     loginAttempts: {type: Number, required: true, default:0},
     lockUntil: { type: Number },
     activationLink: {type: String},
-    Courses: [{ type: String , ref: 'Course' }]
+    completedTask: {type:Number, default:0}
+    // Courses: [{title : {type: String, ref: 'Course'}}]
 })
 UserSchema.virtual('isLocked').get(function() {
     return !!(this.lockUntil && this.lockUntil > Date.now());

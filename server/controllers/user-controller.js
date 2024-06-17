@@ -83,6 +83,15 @@ class UserController {
         }
     }
 
+    async updatedprogess(req, res, next){
+        try {
+            const {email} = req.body;
+            const lo =await userService.progessUpdated(email);
+            return res.json(lo);
+        } catch (e) {
+            next(e);
+        }
+    }
 }
 
 module.exports = new UserController();

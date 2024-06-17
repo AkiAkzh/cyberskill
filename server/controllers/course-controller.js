@@ -72,6 +72,8 @@ class CourseController{
             next(e)
         }
     }
+
+    
 }
 
 module.exports = new CourseController();

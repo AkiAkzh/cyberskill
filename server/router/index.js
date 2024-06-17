@@ -17,12 +17,16 @@ router.post('/login', userController.login);
 router.post('/logout', userController.logout);
 router.get('/activate/:link', userController.activate);
 router.get('/refresh', userController.resresh);
+
+
 router.get('/users', authMiddleware, userController.getUsers);
 router.get('/profile', authMiddleware, userController.profileUser);
-router.post('/submit', authMiddleware ,courseController.userAnswer);
 
+
+router.post('/updatedprogess',userController.updatedprogess);
+router.post('/submit', authMiddleware ,courseController.userAnswer);
 router.get('/info', courseController.getInfo);
-router.get('/courses',authMiddleware, courseController.getCourses);
+router.get('/courses', courseController.getCourses);
 router.post('/course/create', courseController.createCourse)
 router.get('/course/:title',  courseController.getCourse)
 

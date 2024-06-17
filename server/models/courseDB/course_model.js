@@ -23,6 +23,7 @@ const CourseSchema = new Schema({
             tasks:
             [
                 {
+                    taskId: { type: String, default: uuidv4 },
                     taskdescription: { type: String, required: true },
                     hint: {type:String},
                     progress: { type: String, enum: ['not started', 'in-progress', 'completed'], required: true, default: 'not started' }

@@ -116,6 +116,16 @@ class UserService {
         }
         return {user};
     }
+
+    async progessUpdated(email){
+        const user = await UserModel.findOne({email});
+        if( !user ){
+            throw ApiError.BadRequest('Пользователь с таким email не найден')
+        }
+
+        user.completedTask += 1;
+        await user.save();
+      }
 }
 
 module.exports = new UserService();
