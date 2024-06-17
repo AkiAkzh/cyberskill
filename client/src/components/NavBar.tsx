@@ -12,18 +12,24 @@ const translations = {
     courses: "Courses",
     about_us: "About us",
     sign_up_button: "Login",
+    profile: "Profile",
+    logout: "Logout",
   },
   KZ: {
     dashboard: "Басқару панелі",
     courses: "Курстар",
     about_us: "Біз туралы",
     sign_up_button: "Тіркелу",
+    profile: "Профиль",
+    logout: "Шығу",
   },
   RU: {
     dashboard: "Панель управления",
     courses: "Курсы",
     about_us: "О нас",
     sign_up_button: "Зарегистрироваться",
+    profile: "Профиль",
+    logout: "Выйти",
   },
 };
 
@@ -73,10 +79,10 @@ const NavBar: FunctionComponent = () => {
               <Link to="/dashboard"className="links-nav">{t.dashboard}</Link>
               <Link to="/courses"className="links-nav">{t.courses}</Link>
               <Link className="SignUpButtom" to="/profile">
-                <div className="SignUp-label">Profile</div>
+                <div className="SignUp-label">{t.profile}</div>
               </Link>
               <button className="SignUpButtom" onClick={ () => store.logout()}> 
-                <div className="SignUp-label">Logout</div>
+                <div className="SignUp-label">{t.logout}</div>
               </button>
             </div>
           </div>
